@@ -2,22 +2,68 @@
 <html>
 <head>
   <title>Projects</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+    }
+    .navbar {
+      background: #ffffff;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .navbar a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #0078D4;
+      font-weight: bold;
+    }
+    .container {
+      text-align: center;
+      margin-top: 80px;
+      padding: 20px;
+    }
+    .project {
+      background: white;
+      padding: 15px;
+      margin: 15px auto;
+      max-width: 500px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
-<body style="font-family: Arial; text-align: center; margin-top: 60px;">
 
-  <p>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="projects.html">Projects</a> |
+<body>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
     <a href="resume.html">Resume</a>
-  </p>
+  </div>
 
-  <h2>Projects</h2>
+  <div class="container">
+    <h2>Projects</h2>
 
-  <p><b>Sales Dashboard</b><br>Power BI sales performance analysis</p>
-  <p><b>Finance Report</b><br>Budget vs Actual & P&L reporting</p>
-  <p><b>KPI Dashboard</b><br>Operational KPI & SLA monitoring</p>
+    <div class="project">
+      <b>Sales Dashboard</b><br>
+      Power BI dashboard for sales performance & trends
+    </div>
+
+    <div class="project">
+      <b>Finance Report</b><br>
+      Budget vs Actual and P&L reporting
+    </div>
+
+    <div class="project">
+      <b>KPI Dashboard</b><br>
+      Operational KPI & SLA monitoring
+    </div>
+  </div>
 
 </body>
 </html>
-
