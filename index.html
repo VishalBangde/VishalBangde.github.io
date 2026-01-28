@@ -134,6 +134,27 @@ section {
   transform: scale(1.05);
   transition: 0.3s;
 }
+    /* SERVICES */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  animation: fadeUp 1s ease-in-out;
+}
+
+.service-card h3 {
+  color: #0078D4;
+  margin-bottom: 10px;
+}
+
 
   </style>
 </head>
@@ -143,11 +164,13 @@ section {
 <!-- NAV -->
 <nav>
   <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+
 </nav>
 
 <div class="hero" id="home">
@@ -223,6 +246,47 @@ section {
     Operational KPI and SLA tracking
   </div>
 </section>
+  <!-- SERVICES -->
+<section id="services">
+  <h2>Services</h2>
+
+  <div class="service-grid">
+
+    <div class="service-card">
+      <h3>Power BI Dashboard Development</h3>
+      <p>
+        Design and develop interactive Power BI dashboards
+        with KPIs, drill-downs, and business insights.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>DAX & Data Modeling</h3>
+      <p>
+        Optimized DAX calculations and scalable data models
+        for high-performance reporting.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>SQL & Data Analysis</h3>
+      <p>
+        Data extraction, transformation, and analysis
+        using SQL Server for BI solutions.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Reporting & Automation</h3>
+      <p>
+        Scheduled refresh, gateway setup, and automated
+        reporting for business users.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
 <!-- CONTACT -->
 <section id="contact">
