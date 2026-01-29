@@ -408,6 +408,70 @@ footer{
   animation:fadeUp 0.8s ease forwards;
 }
 
+   .about-container{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;
+  margin-top:40px;
+}
+
+   .about-card{
+  background:rgba(255,255,255,0.04);
+  padding:40px;
+  border-radius:14px;
+
+  backdrop-filter:blur(8px);
+
+  border:1px solid rgba(255,255,255,0.06);
+
+  transition:.4s;
+}
+
+.about-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+   .about-card h3{
+  color:#c7a17a;
+  margin-bottom:15px;
+}
+
+.about-card p{
+  color:#ddd;
+  line-height:1.8;
+}
+
+   .about-stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+   .stat-box{
+
+  background:#111;
+  color:white;
+
+  padding:25px;
+  border-radius:12px;
+  text-align:center;
+
+  transition:.4s;
+}
+
+.stat-box:hover{
+  transform:translateY(-10px);
+  background:linear-gradient(145deg,#1b1b1b,#000);
+}
+
+   .stat-box h1{
+  color:#c7a17a;
+  font-size:34px;
+  margin-bottom:5px;
+}
+
+
 
 
 
@@ -470,55 +534,63 @@ footer{
 
 
 
-<!-- ABOUT -->
+<!-- PREMIUM ABOUT -->
 <section id="about">
+
   <h2>About Me</h2>
-  <p>
-    I am a results-driven Power BI Developer with over 8 years of experience in designing, developing, and delivering end-to-end business intelligence and data analytics solutions. I specialize in transforming complex data into clear, actionable insights that help stakeholders make informed decisions.
 
-With strong expertise in Power BI, DAX, SQL, Excel, and data modeling, I have successfully built high-performing dashboards and reports across domains such as Sales, Finance, Operations, and Management Reporting. I am skilled in gathering business requirements, defining KPIs, and converting them into scalable, user-friendly BI solutions.
+  <div class="about-container">
 
-I have hands-on experience in data modeling (star schema), performance optimization, Power Query (M), Row-Level Security (RLS), gateways, and Power BI Service administration. I consistently follow best practices for report design, UX, and data governance to ensure accuracy, performance, and usability.
+    <!-- LEFT -->
+    <div class="about-card">
+      <h3>Senior Power BI Developer</h3>
 
-I am highly collaborative and comfortable working with cross-functional teams, including business users, data engineers, and leadership. I take ownership of deliverables, focus on quality, and continuously upskill to stay aligned with evolving Microsoft Power Platform and analytics technologies.
-  </p>
+      <p>
+        I am a results-driven <b>Power BI Developer with 8+ years of experience</b> 
+        delivering end-to-end Business Intelligence solutions that transform 
+        complex data into actionable insights.
+      </p>
 
-  <h2>Personal Information</h2>
+      <p>
+        My expertise lies in building high-performance dashboards, optimizing data models,
+        and enabling leadership teams to make confident, data-driven decisions.
+      </p>
 
-<div class="personal-info">
+      <p>
+        I specialize in <b>Power BI, Microsoft Fabric, SQL, DAX, and Data Modeling</b>,
+        consistently following best practices in performance, governance, and UX design.
+      </p>
+    </div>
 
-  <div class="info-item">
-    <span>➤ Birthday:</span> 28 June 
+    <!-- RIGHT STATS -->
+    <div class="about-stats">
+
+      <div class="stat-box">
+        <h1>8+</h1>
+        <p>Years Experience</p>
+      </div>
+
+      <div class="stat-box">
+        <h1>50+</h1>
+        <p>Dashboards Delivered</p>
+      </div>
+
+      <div class="stat-box">
+        <h1>15+</h1>
+        <p>Business Solutions</p>
+      </div>
+
+      <div class="stat-box">
+        <h1>10+</h1>
+        <p>Tools & Technologies</p>
+      </div>
+
+    </div>
+
   </div>
-
-
-  <div class="info-item">
-    <span>➤ Website:</span> https://vishalbangde.github.io/
-  </div>
-
-  <div class="info-item">
-    <span>➤ Degree:</span> Bachelor of Engineering in CSE
-  </div>
-
-  <div class="info-item">
-    <span>➤ Phone:</span> +91-7020292767
-  </div>
-
-  <div class="info-item">
-    <span>➤ Email:</span> bangdevishal07@gmail.com
-  </div>
-
-  <div class="info-item">
-    <span>➤ City:</span> Nagpur, Maharashtra, India
-  </div>
-
-  <div class="info-item">
-    <span>➤ Avilable to Work: </span> Available
-  </div>
-
-</div>
 
 </section>
+
 
 <!-- SKILLS -->
 <section id="skills">
