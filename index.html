@@ -602,6 +602,49 @@ footer{
   color:#6f4e37;
 }
 
+.timeline{
+  position:relative;
+  max-width:900px;
+  margin:50px auto;
+}
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:20px;
+  top:0;
+  width:4px;
+  height:100%;
+  background:#6f4e37;
+}
+.timeline-item{
+  margin-left:60px;
+  margin-bottom:40px;
+}
+.timeline-content{
+  background:#ffffff;
+  padding:25px;
+  border-radius:12px;
+
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+  transition:.3s;
+}
+.timeline-content:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+.timeline-content h3{
+  color:#6f4e37;
+}
+.timeline-content h4{
+  color:#777;
+  font-weight:normal;
+  margin-bottom:10px;
+}
+.timeline-content ul{
+  padding-left:20px;
+  line-height:1.7;
+}
 
 
 
@@ -804,84 +847,74 @@ footer{
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <h2>Experience</h2>
 
-  <div class="card">
-  <h3>Sr. Consultant(Power BI)</h3>
-  <p><b>Incresol Software Serveices Pvt Ltd.</b></p>
-  <p><i>Oct 2025 – Present</i></p>
+  <h2>Professional Experience</h2>
 
-  <ul style="text-align:left; max-width:700px; margin:auto;">
-    <li>Design, develop, and maintain interactive Power BI dashboards and reports to support business decision-making across Sales, Finance, and Operations.</li>
-    <li>Work closely with business stakeholders to gather requirements, understand KPIs, and translate business needs into effective BI solutions.</li>
-    <li>Build and optimize data models using star/snowflake schemas for better performance and scalability.</li>
-    <li>Develop and optimize SQL queries, views, and stored procedures to extract, transform, and load data from SQL Server and other data sources.</li>
-    <li>Perform data cleansing, transformation, and modeling using Power Query (M).</li>
-    <li>Publish reports to Power BI Service, manage workspaces, datasets, refresh schedules, and gateways.</li>
-     <li>Provide user training, documentation, and support for Power BI reports and dashboards.</li>
-     <li>Participate in continuous improvement by adopting new Power BI features and best practices.</li>
+  <div class="timeline">
 
-  </ul>
-</div>
+    <!-- Item -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>Sr. Consultant (Power BI)</h3>
+        <h4>Incresol Software Services Pvt Ltd • Oct 2025 – Present</h4>
 
-
-  <div class="card">
-    <h3>Power BI Developer</h3>
-    <p><b>Camsdata Technologies Pvt. Ltd.</b></p>
-    <p><i>Mar 2024 – Jun 2024</i></p>
-
-     <ul style="text-align:left; max-width:700px; margin:auto;">
-    <li>Designed and deployed scalable data pipelines in Microsoft Fabric,leveraging Data Factory and Lakehouse to automate ETL workflows and deliver curated datasets for reporting.</li>
-    <li>Engineered hotel chain analytics for tracking occupancy, revenue, RevPAR, ARR, F&B, and customer satisfaction.</li>
-    <li>Constructed star schema models; implemented RLS by hotel region and role.</li>
-       <li>Integrated data from SQL Server, Excel, and Azure Synapse; enabled scheduled refresh via Power BI Service.</li>
-  </ul>
-  </div>
-
-  <div class="card">
-  <h3>Sr. Power BI Developer</h3>
-  <p><b>Neoquant Solutions Pvt. Ltd</b></p>
-  <p><i>Feb 2024 – Nov 2024</i></p>
-
-     <ul style="text-align:left; max-width:700px; margin:auto;">
-      <li>Designed and developed interactive Power BI dashboards for Sales, Finance, and Operations teams.</li>
-      <li>Created complex DAX measures including YTD, MTD, rolling averages, and performance KPIs.</li>
-      <li>Built optimized data models using star schema for improved performance.</li>
-      <li>Implemented Row-Level Security (RLS) to control data access.</li>
-      <li>Integrated Power BI with SQL Server, Excel, and SharePoint data sources.</li>
-      <li>Worked closely with stakeholders to gather requirements and deliver business-ready reports.</li>
-      <li>Managed scheduled refresh using on-premises data gateway.</li>
-    </ul>
+        <ul>
+          <li>Design enterprise Power BI dashboards for Sales, Finance, and Operations.</li>
+          <li>Build optimized data models using star schema.</li>
+          <li>Develop advanced SQL queries and ETL workflows.</li>
+          <li>Manage Power BI Service, gateways, and scheduled refresh.</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="card">
-  <h3> Power BI Developer</h3>
-  <p><b>Codify Software Services Pvt. Ltd</b></p>
-  <p><i>Mar 2023 – Jan 2024</i></p>
+    <!-- Item -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>Power BI Developer</h3>
+        <h4>Camsdata Technologies Pvt Ltd • Mar 2024 – Jun 2024</h4>
 
-       <ul style="text-align:left; max-width:700px; margin:auto;">
-    <li>Utilized Microsoft Fabric for unified data management and reporting.</li>
-    <li>Constructed advanced DAX metrics for VWAP, performance benchmarking, and time intelligence (MTD, YTD, QTD).</li>
-    <li>Deployed dashboards via Power BI Report Server, ensuring secure access and alignment with enterprise governance.</li>
-   <li>CUsed DAX Studio to analyze query performance, optimize DAX measures, and reduce report load time.</li>
-       </ul>
+        <ul>
+          <li>Built scalable analytics solutions using Microsoft Fabric.</li>
+          <li>Designed hotel performance dashboards tracking revenue and occupancy.</li>
+          <li>Implemented Row-Level Security based on roles.</li>
+        </ul>
       </div>
+    </div>
 
-    <div class="card">
-  <h3>BI / Power BI Developer</h3>
-  <p><b>ICEICO Technologies Pvt. Ltd</b></p>
-  <p><i>Nov 2017 – Jan 2023</i></p>
+    <!-- Item -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>Sr. Power BI Developer</h3>
+        <h4>Neoquant Solutions Pvt Ltd • Feb 2024 – Nov 2024</h4>
 
-  <ul style="text-align:left; max-width:700px; margin:auto;">
-    <li>Prepared SQL queries and data extracts for reporting.</li>
-    <li>Created Excel-based MIS and reports for management.</li>
-    <li>Supported dashboard development and data validation.</li>
-    <li>Implement Row-Level Security (RLS) to ensure data confidentiality and role-based access.</li>
-  </ul>
-</div>
+        <ul>
+          <li>Created interactive dashboards for leadership teams.</li>
+          <li>Developed complex DAX metrics including YTD and rolling averages.</li>
+          <li>Integrated SQL Server, Excel, and SharePoint data sources.</li>
+        </ul>
+      </div>
+    </div>
 
+    <!-- Item -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>BI / Power BI Developer</h3>
+        <h4>ICEICO Technologies Pvt Ltd • Nov 2017 – Jan 2023</h4>
 
- </section>
+        <ul>
+          <li>Developed MIS reports and automated dashboards.</li>
+          <li>Wrote SQL queries for business reporting.</li>
+          <li>Supported enterprise BI implementations.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+  
+  
 
  <!-- PREMIUM SERVICES -->
 <section id="services">
