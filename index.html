@@ -13,22 +13,30 @@
       scroll-behavior: smooth;
     }
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #111;
-      padding: 12px;
-      text-align: center;
-      z-index: 1000;
-    }
+  nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #4b2e2e; /* brown */
+  padding-top: 40px;
+  z-index: 1000;
+}
 
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+
+   nav a {
+  display: block;
+  color: #ffffff;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background: #6f4e37;
+}
+
 
     section {
       padding: 80px 20px;
@@ -36,11 +44,9 @@
       margin: auto;
     }
 
-   .hero {
-  background: linear-gradient(to right, #a47148, #7b4a2e);
-  color: white;
-  text-align: center;
-  padding: 120px 20px;
+   .hero,
+section {
+  margin-left: 220px;
 }
 
 
