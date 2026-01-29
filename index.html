@@ -476,7 +476,24 @@ footer{
 }
 .skill-box{
   margin-bottom:30px;
+
+  opacity:0;
+  transform:translateY(40px);
+
+  animation:slideUp 1s ease forwards;
 }
+@keyframes slideUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+.skill-box:hover{
+  transform:translateY(-6px);
+  transition:.3s;
+}
+
+   
 .skill-title{
   display:flex;
   justify-content:space-between;
@@ -486,7 +503,7 @@ footer{
 .skill-bar{
   width:100%;
   height:12px;
-  background:#222;
+  background:#111;
   border-radius:20px;
   overflow:hidden;
 }
@@ -494,11 +511,21 @@ footer{
   height:100%;
   border-radius:20px;
 
-  background:linear-gradient(90deg,#c7a17a,#6f4e37);
+  background:linear-gradient(270deg,#c7a17a,#6f4e37,#c7a17a);
+  background-size:200% 200%;
 
-  width:0;
-  animation:fillBar 2s ease forwards;
+  animation:
+    fillBar 2s ease forwards,
+    gradientMove 4s linear infinite;
+
+  box-shadow:0 0 10px rgba(199,161,122,0.7);
 }
+@keyframes gradientMove{
+  0%{background-position:0%}
+  100%{background-position:200%}
+}
+
+   
 .powerbi{ width:90%; }
 .dax{ width:85%; }
 .sql{ width:80%; }
