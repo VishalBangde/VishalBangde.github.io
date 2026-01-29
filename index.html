@@ -25,7 +25,16 @@ nav {
 
   padding-top: 25px;
 
-  
+  overflow-y: auto;     /* ✅ ENABLE SCROLL */
+  scrollbar-width: thin; /* smoother scroll (Firefox) */
+}
+    nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+nav::-webkit-scrollbar-thumb {
+  background: #6f4e37;
+  border-radius: 10px;
 }
 
 
