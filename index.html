@@ -508,13 +508,19 @@ footer{
   overflow:hidden;
 }
 .skill-fill{
- animation:none;
+  height:100%;
+  border-radius:20px;
+
+  background:linear-gradient(270deg,#c7a17a,#6f4e37,#c7a17a);
+  background-size:200% 200%;
+
+  width:0;   /* VERY IMPORTANT */
+
+  box-shadow:0 0 10px rgba(199,161,122,0.7);
+
+  transition:width 2s ease;
 }
 
-@keyframes gradientMove{
-  0%{background-position:0%}
-  100%{background-position:200%}
-}
 
    
 .powerbi{ width:90%; }
@@ -529,11 +535,7 @@ footer{
   }
 }
 
-   .animate-skill{
-  animation:
-    fillBar 2s ease forwards,
-    gradientMove 4s linear infinite;
-}
+
 
 
 
@@ -670,7 +672,7 @@ footer{
         <span>90%</span>
       </div>
       <div class="skill-bar">
-        <div class="skill-fill powerbi"></div>
+        <div class="skill-fill" data-width="90%"></div>
       </div>
     </div>
 
@@ -957,6 +959,42 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(document.querySelector("#skills"));
 
 </script>
+
+  <script>
+
+function animateSkills(){
+
+  const skills = document.querySelectorAll(".skill-fill");
+
+  skills.forEach(skill => {
+
+    const targetWidth = skill.getAttribute("data-width");
+
+    skill.style.width = "0"; // reset
+
+    setTimeout(()=>{
+      skill.style.width = targetWidth;
+    },200);
+
+  });
+
+}
+
+
+/* RUN ON PAGE LOAD */
+window.addEventListener("load", animateSkills);
+
+
+/* RUN WHEN CLICKING SKILLS MENU */
+document.querySelector('a[href="#skills"]')
+.addEventListener("click", () => {
+
+  setTimeout(animateSkills,400);
+
+});
+
+</script>
+
 
 
 </body>
