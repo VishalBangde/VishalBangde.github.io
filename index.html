@@ -508,18 +508,9 @@ footer{
   overflow:hidden;
 }
 .skill-fill{
-  height:100%;
-  border-radius:20px;
-
-  background:linear-gradient(270deg,#c7a17a,#6f4e37,#c7a17a);
-  background-size:200% 200%;
-
-  animation:
-    fillBar 2s ease forwards,
-    gradientMove 4s linear infinite;
-
-  box-shadow:0 0 10px rgba(199,161,122,0.7);
+ animation:none;
 }
+
 @keyframes gradientMove{
   0%{background-position:0%}
   100%{background-position:200%}
@@ -537,6 +528,13 @@ footer{
     width:0;
   }
 }
+
+   .animate-skill{
+  animation:
+    fillBar 2s ease forwards,
+    gradientMove 4s linear infinite;
+}
+
 
 
 
@@ -928,6 +926,38 @@ footer{
 <footer>
   © 2026 Vishal Bangde | Portfolio
 </footer>
+
+
+  <script>
+
+const skills = document.querySelectorAll(".skill-fill");
+
+const observer = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+
+      skills.forEach(skill => {
+
+        skill.classList.remove("animate-skill");
+
+        void skill.offsetWidth; // reset animation
+
+        skill.classList.add("animate-skill");
+
+      });
+
+    }
+
+  });
+
+},{ threshold:0.5 });
+
+observer.observe(document.querySelector("#skills"));
+
+</script>
+
 
 </body>
 </html>
