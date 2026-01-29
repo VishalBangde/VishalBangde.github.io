@@ -646,6 +646,84 @@ footer{
   line-height:1.7;
 }
 
+   .contact-ultra{
+
+  background:
+  linear-gradient(135deg,#2d1b16,#0f0f0f);
+
+  padding:120px 20px;
+  display:flex;
+  justify-content:center;
+}
+.contact-card{
+
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(14px);
+
+  padding:60px;
+  border-radius:18px;
+
+  text-align:center;
+  max-width:750px;
+
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+
+  animation:fadeUp 1s ease;
+}
+.contact-card h2{
+  color:white;
+  font-size:38px;
+  margin-bottom:15px;
+}
+.contact-card p{
+  color:#ddd;
+  margin-bottom:35px;
+  line-height:1.7;
+}
+.contact-buttons{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.contact-btn{
+
+  padding:14px 28px;
+  border-radius:40px;
+
+  text-decoration:none;
+  color:white;
+
+  font-weight:bold;
+
+  transition:.35s;
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.email{
+  background:#6f4e37;
+}
+
+.linkedin{
+  background:#0077b5;
+}
+
+.whatsapp{
+  background:#25D366;
+}
+.contact-btn:hover{
+
+  transform:translateY(-6px) scale(1.05);
+
+  box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+.contact-btn{
+  box-shadow:0 0 15px rgba(255,255,255,0.08);
+}
+
+
 
 
 
@@ -973,43 +1051,46 @@ footer{
   </div>
 </section>
 
+  
+<!-- SHOWSTOPPER CONTACT -->
+<section id="contact" class="contact-ultra">
 
+  <div class="contact-card">
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
+      <h2>Let's Work Together</h2>
 
-<div class="social-icons-text">
+      <p>
+        Have a project, opportunity, or role in mind?  
+        I’m always open to discussing how data can drive smarter decisions.
+      </p>
 
-  <a href="https://linkedin.com/in/vishal-bangde-66268a2a4">
-    <i class="fab fa-linkedin"></i>
-    <span>LinkedIn</span>
-  </a>
+      <div class="contact-buttons">
 
-  <a href="https://vishalbangde.github.io/">
-    <i class="fab fa-github"></i>
-    <span>GitHub</span>
-  </a>
+        <a href="mailto:bangdevishal07@gmail.com" class="contact-btn email">
+          <i class="fas fa-envelope"></i> Email Me
+        </a>
 
-  <a href="mailto:bangdevishal07@gmail.com">
-    <i class="fas fa-envelope"></i>
-    <span>Email</span>
-  </a>
+        <a href="https://linkedin.com/in/vishal-bangde-66268a2a4"
+           target="_blank"
+           class="contact-btn linkedin">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
 
-  <a href="https://wa.me/+91 7020292767">
-  <i class="fab fa-whatsapp"></i>
-  <span>WhatsApp</span>
-</a>
+        <a href="https://wa.me/917020292767"
+           target="_blank"
+           class="contact-btn whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
 
+      </div>
 
-</div>
+  </div>
 
-
-
-  <a href="Vishal_Bangde_Resume.pdf" download class="btn">
-    Download Resume
-  </a>
 </section>
+
+
+
+
 
 <footer>
   © 2026 Vishal Bangde | Portfolio
