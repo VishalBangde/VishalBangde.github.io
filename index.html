@@ -599,6 +599,29 @@ footer{
   transform:translateY(40px);
   animation:fadeUp 1s ease forwards;
 }
+   .projects-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+.project-card{
+  background:#ffffff;
+  padding:25px;
+  border-radius:12px;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+  transition:0.3s;
+}
+.project-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+.project-card h3{
+  color:#6f4e37;
+}
+
 
 
 
@@ -881,93 +904,41 @@ footer{
  </section>
 
 
-<!-- PREMIUM PROJECTS -->
+<!-- PROJECTS -->
 <section id="projects">
 
   <h2>Featured Projects</h2>
 
   <div class="projects-container">
 
-    <!-- Project 1 -->
     <div class="project-card">
-
-      <div class="project-image">
-        📊
-      </div>
-
-      <div class="project-content">
-        <h3>Sales Performance Dashboard</h3>
-
-        <p>
-          Built an executive-level Power BI dashboard to track revenue,
-          profit margins, regional performance, and growth trends.
-        </p>
-
-        <div class="tech-tags">
-          <span>Power BI</span>
-          <span>DAX</span>
-          <span>SQL</span>
-        </div>
-
-      </div>
-
+      <h3>Sales Performance Dashboard</h3>
+      <p>
+        Built an interactive Power BI dashboard to analyze revenue,
+        profit margins, and regional growth trends for leadership teams.
+      </p>
     </div>
 
-
-    <!-- Project 2 -->
     <div class="project-card">
-
-      <div class="project-image">
-        💰
-      </div>
-
-      <div class="project-content">
-        <h3>Financial Analytics Report</h3>
-
-        <p>
-          Developed a financial intelligence solution enabling leadership
-          to monitor budget vs actuals and optimize cost strategy.
-        </p>
-
-        <div class="tech-tags">
-          <span>Power BI</span>
-          <span>Data Modeling</span>
-          <span>Excel</span>
-        </div>
-
-      </div>
-
+      <h3>Financial Analytics Report</h3>
+      <p>
+        Designed a financial intelligence solution to track budget vs actuals,
+        enabling smarter cost optimization decisions.
+      </p>
     </div>
 
-
-    <!-- Project 3 -->
     <div class="project-card">
-
-      <div class="project-image">
-        🚀
-      </div>
-
-      <div class="project-content">
-        <h3>KPI & SLA Monitoring Dashboard</h3>
-
-        <p>
-          Designed an operational dashboard to track KPIs, SLA adherence,
-          and team productivity in real-time.
-        </p>
-
-        <div class="tech-tags">
-          <span>Fabric</span>
-          <span>SQL</span>
-          <span>Power Platform</span>
-        </div>
-
-      </div>
-
+      <h3>KPI & SLA Monitoring Dashboard</h3>
+      <p>
+        Developed an operational dashboard to monitor KPIs,
+        SLA adherence, and real-time team performance.
+      </p>
     </div>
 
   </div>
 
 </section>
+
 
  <!-- PREMIUM SERVICES -->
 <section id="services">
