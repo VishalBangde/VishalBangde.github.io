@@ -367,6 +367,48 @@ footer{
   color:white;
 }
 
+   .services-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:50px;
+}
+.service-box{
+
+  background:#111;
+  color:white;
+
+  padding:30px;
+  border-radius:14px;
+
+  text-align:center;
+
+  transition:0.4s;
+  cursor:pointer;
+
+  border:1px solid rgba(255,255,255,0.05);
+}
+.service-box i{
+  font-size:32px;
+  margin-bottom:15px;
+  color:#c7a17a;
+}
+.service-box:hover{
+
+  transform:translateY(-12px) scale(1.03);
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.6);
+
+  background:linear-gradient(145deg,#1b1b1b,#000);
+}
+.service-box h3{
+  margin-bottom:10px;
+}
+.service-box{
+  animation:fadeUp 0.8s ease forwards;
+}
+
+
 
 
 
@@ -608,46 +650,63 @@ I am highly collaborative and comfortable working with cross-functional teams, i
     Operational KPI and SLA tracking
   </div>
 </section>
-  <!-- SERVICES -->
+ <!-- PREMIUM SERVICES -->
 <section id="services">
-  <h2>Services</h2>
+  <h2>What I Offer</h2>
 
-  <div class="service-grid">
+  <div class="services-container">
 
-    <div class="service-card">
+    <div class="service-box">
+      <i class="fas fa-chart-line"></i>
       <h3>Power BI Dashboard Development</h3>
-      <p>
-        Design and develop interactive Power BI dashboards
-        with KPIs, drill-downs, and business insights.
-      </p>
+      <p>Interactive, visually compelling dashboards designed for executive decision-making.</p>
     </div>
 
-    <div class="service-card">
-      <h3>DAX & Data Modeling</h3>
-      <p>
-        Optimized DAX calculations and scalable data models
-        for high-performance reporting.
-      </p>
+    <div class="service-box">
+      <i class="fas fa-database"></i>
+      <h3>Data Modeling</h3>
+      <p>High-performance star schema models optimized for scalability and speed.</p>
     </div>
 
-    <div class="service-card">
-      <h3>SQL & Data Analysis</h3>
-      <p>
-        Data extraction, transformation, and analysis
-        using SQL Server for BI solutions.
-      </p>
+    <div class="service-box">
+      <i class="fas fa-brain"></i>
+      <h3>Advanced DAX Solutions</h3>
+      <p>Complex KPIs, time intelligence, forecasting metrics, and optimized calculations.</p>
     </div>
 
-    <div class="service-card">
-      <h3>Reporting & Automation</h3>
-      <p>
-        Scheduled refresh, gateway setup, and automated
-        reporting for business users.
-      </p>
+    <div class="service-box">
+      <i class="fas fa-sync-alt"></i>
+      <h3>ETL & Data Transformation</h3>
+      <p>Clean, structured data pipelines using Power Query, Fabric, and SQL.</p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-cloud"></i>
+      <h3>Microsoft Fabric</h3>
+      <p>Unified analytics architecture using Lakehouse, Data Factory, and Real-Time insights.</p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-lock"></i>
+      <h3>Row-Level Security</h3>
+      <p>Enterprise-grade data security ensuring users see only what they should.</p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-tachometer-alt"></i>
+      <h3>Performance Optimization</h3>
+      <p>Reduce report load time and improve query efficiency dramatically.</p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-cogs"></i>
+      <h3>Power BI Report Server</h3>
+      <p>On-premise reporting solutions aligned with governance policies.</p>
     </div>
 
   </div>
 </section>
+
 
 
 <!-- CONTACT -->
