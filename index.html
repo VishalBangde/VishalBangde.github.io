@@ -722,6 +722,52 @@ footer{
 .contact-btn{
   box-shadow:0 0 15px rgba(255,255,255,0.08);
 }
+.resume-btn{
+
+  display:inline-block;
+  margin-top:40px;
+
+  padding:16px 38px;
+
+  font-size:18px;
+  font-weight:bold;
+
+  color:white;
+  text-decoration:none;
+
+  border-radius:50px;
+
+  background:linear-gradient(135deg,#c7a17a,#6f4e37);
+
+  transition:.4s;
+
+  box-shadow:0 0 20px rgba(199,161,122,0.6);
+}
+.resume-btn:hover{
+
+  transform:translateY(-8px) scale(1.07);
+
+  box-shadow:0 20px 45px rgba(0,0,0,0.6);
+}
+@keyframes pulse{
+
+  0%{
+    box-shadow:0 0 15px rgba(199,161,122,0.6);
+  }
+
+  50%{
+    box-shadow:0 0 35px rgba(199,161,122,1);
+  }
+
+  100%{
+    box-shadow:0 0 15px rgba(199,161,122,0.6);
+  }
+
+}
+
+.resume-btn{
+  animation:pulse 2.5s infinite;
+}
 
 
 
@@ -1083,6 +1129,15 @@ footer{
         </a>
 
       </div>
+    
+    <a href="Vishal_Bangde_Resume.pdf"
+   download
+   class="resume-btn">
+
+   <i class="fas fa-download"></i>
+   Download Resume
+
+</a>
 
   </div>
 
