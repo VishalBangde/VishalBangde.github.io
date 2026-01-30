@@ -592,49 +592,7 @@ footer{
   color:#6f4e37;
 }
 
-.timeline{
-  position:relative;
-  max-width:900px;
-  margin:50px auto;
-}
-.timeline::before{
-  content:'';
-  position:absolute;
-  left:20px;
-  top:0;
-  width:4px;
-  height:100%;
-  background:#6f4e37;
-}
-.timeline-item{
-  margin-left:60px;
-  margin-bottom:40px;
-}
-.timeline-content{
-  background:#ffffff;
-  padding:25px;
-  border-radius:12px;
 
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
-
-  transition:.3s;
-}
-.timeline-content:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.15);
-}
-.timeline-content h3{
-  color:#6f4e37;
-}
-.timeline-content h4{
-  color:#777;
-  font-weight:normal;
-  margin-bottom:10px;
-}
-.timeline-content ul{
-  padding-left:20px;
-  line-height:1.7;
-}
 
    .contact-ultra{
 
@@ -917,6 +875,116 @@ nav a.active{
   color:white;
 }
 
+/* ===== ULTRA EXPERIENCE ===== */
+
+#experience{
+  background:linear-gradient(135deg,#2d1b16,#0f0f0f);
+}
+
+#experience h2{
+  color:white;
+}
+
+/* Timeline wrapper */
+.timeline{
+  position:relative;
+  max-width:1000px;
+  margin:60px auto;
+}
+
+/* Center glowing line */
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+  width:4px;
+  height:100%;
+
+  background:linear-gradient(#c7a17a,#6f4e37);
+
+  box-shadow:0 0 20px rgba(199,161,122,.7);
+}
+
+/* Timeline item */
+.timeline-item{
+  width:50%;
+  padding:20px 40px;
+  position:relative;
+}
+
+/* LEFT side */
+.timeline-item:nth-child(odd){
+  left:0;
+  text-align:right;
+}
+
+/* RIGHT side */
+.timeline-item:nth-child(even){
+  left:50%;
+}
+
+/* Circle nodes */
+.timeline-item::before{
+  content:'';
+  position:absolute;
+  top:30px;
+
+  width:18px;
+  height:18px;
+
+  background:#c7a17a;
+  border-radius:50%;
+
+  box-shadow:0 0 15px rgba(199,161,122,.9);
+}
+
+.timeline-item:nth-child(odd)::before{
+  right:-9px;
+}
+
+.timeline-item:nth-child(even)::before{
+  left:-9px;
+}
+
+/* Glass card */
+.timeline-content{
+
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+
+  padding:28px;
+  border-radius:14px;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  color:#eee;
+
+  transition:.4s;
+}
+
+/* Hover lift */
+.timeline-content:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 20px 50px rgba(0,0,0,.6);
+}
+
+/* Role */
+.timeline-content h3{
+  color:#c7a17a;
+}
+
+/* Company/date */
+.timeline-content h4{
+  color:#d7ccc8;
+  font-weight:400;
+}
+
+/* Bullet text */
+.timeline-content li{
+  line-height:1.7;
+}
 
 
 
