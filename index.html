@@ -11,6 +11,17 @@
 
  <style>
 
+   :root{
+    --primary:#39B0B7;
+    --primary-dark:#2d8f95;
+    --primary-light:#6fd1d6;
+    --bg-dark:#0b1215;
+    --card-bg:#111a1d;
+    --text-white:#ffffff;
+    --text-gray:#b6c2c9;
+}
+
+
 /* ===== GLOBAL ===== */
 body{
   margin:0;
@@ -917,6 +928,44 @@ nav a.active{
   color:white;
 }
 
+body{
+  background:var(--dark);
+  color:var(--text);
+  font-family: 'Poppins', sans-serif;
+}
+   .sidebar{
+  background:#0e1a1d;
+  border-right:1px solid var(--primary);
+}
+
+.sidebar a{
+  color:white;
+}
+
+.sidebar a:hover{
+  color:var(--primary);
+}
+h1,h2,h3{
+  color:var(--primary);
+}
+.btn{
+  background:var(--primary);
+  color:white;
+  padding:10px 20px;
+  border:none;
+  border-radius:6px;
+}
+
+.btn:hover{
+  opacity:.8;
+}
+.skill-box, .card{
+  background:var(--card);
+  border-radius:10px;
+}
+.skill-fill{
+  background:var(--primary);
+}
 
 
 
