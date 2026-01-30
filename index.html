@@ -246,11 +246,9 @@ footer{
 }
 
 /* Role */
-.home-content h2{
-  color:#d7ccc8;
-  font-weight:normal;
-  margin-bottom:20px;
-}
+.home-content <h2>
+  <span id="typing"></span>
+</h2>
 
 /* Description */
 .home-content p{
@@ -780,6 +778,8 @@ footer{
 
 
 </style>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 
 </head>
 
@@ -1216,6 +1216,27 @@ document.querySelector('a[href="#skills"]')
 });
 
 </script>
+
+  <script>
+
+var typed = new Typed("#typing", {
+
+  strings: [
+    "Senior Power BI Developer",
+    "Microsoft Fabric Specialist",
+    "Data Analytics Expert",
+    "Business Intelligence Professional"
+  ],
+
+  typeSpeed: 60,
+  backSpeed: 35,
+  backDelay: 1500,
+  loop: true
+
+});
+
+</script>
+
 
 
 
