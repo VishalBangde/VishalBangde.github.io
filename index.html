@@ -984,22 +984,23 @@ nav a.active{
     <div class="about-stats">
 
       <div class="stat-box">
-        <h1>8+</h1>
+        <h1 class="counter" data-target="8">0</h1>
         <p>Years Experience</p>
       </div>
 
       <div class="stat-box">
-        <h1>70+</h1>
+        <h1 class="counter" data-target="70">0</h1>
+
         <p>Dashboards Delivered</p>
       </div>
 
       <div class="stat-box">
-        <h1>20+</h1>
+        <h1 class="counter" data-target="20">0</h1>
         <p>Business Solutions</p>
       </div>
 
       <div class="stat-box">
-        <h1>15+</h1>
+        <h1 class="counter" data-target="15">0</h1>
         <p>Tools & Technologies</p>
       </div>
 
@@ -1195,32 +1196,33 @@ nav a.active{
   <div class="achievements-container">
 
     <div class="achievement-card">
-      <h1>8+</h1>
+     <h1 class="counter" data-target="8">0</h1>
       <p>Years in Data Analytics</p>
     </div>
 
     <div class="achievement-card">
-      <h1>70+</h1>
+      <h1 class="counter" data-target="70">0</h1>
+
       <p>Power BI Dashboards Delivered</p>
     </div>
 
     <div class="achievement-card">
-      <h1>40%</h1>
+     <h1 class="counter" data-target="40">0</h1>
       <p>Average Reporting Time Reduced</p>
     </div>
 
     <div class="achievement-card">
-      <h1>20+</h1>
+      <h1 class="counter" data-target="20">0</h1>
       <p>Enterprise Solutions Implemented</p>
     </div>
 
     <div class="achievement-card">
-      <h1>15+</h1>
+      <h1 class="counter" data-target="15">0</h1>
       <p>Executive-Level Reports</p>
     </div>
 
     <div class="achievement-card">
-      <h1>10+</h1>
+      <h1 class="counter" data-target="10">0</h1>
       <p>Technologies Mastered</p>
     </div>
 
@@ -1531,6 +1533,51 @@ achievementCards.forEach(card=>{
 });
 
 </script>
+
+  <script>
+
+const counters = document.querySelectorAll('.counter');
+
+const counterObserver = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+
+      const counter = entry.target;
+      const target = +counter.getAttribute('data-target');
+
+      let count = 0;
+      const speed = target / 60; // smaller = slower
+
+      const updateCount = () => {
+
+        if(count < target){
+          count += speed;
+          counter.innerText = Math.ceil(count);
+          setTimeout(updateCount, 20);
+        }
+        else{
+          counter.innerText = target + "+";
+        }
+
+      };
+
+      updateCount();
+      counterObserver.unobserve(counter);
+
+    }
+
+  });
+
+},{ threshold:0.5 });
+
+counters.forEach(counter=>{
+  counterObserver.observe(counter);
+});
+
+</script>
+
 
 
 
