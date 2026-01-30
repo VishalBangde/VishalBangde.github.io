@@ -525,12 +525,6 @@ footer{
 
 
    
-.powerbi{ width:90%; }
-.dax{ width:85%; }
-.sql{ width:80%; }
-.fabric{ width:75%; }
-.platform{ width:70%; }
-.modeling{ width:85%; }
 @keyframes fillBar{
   from{
     width:0;
@@ -1085,13 +1079,16 @@ nav a.active{
   <h2>Technical Expertise</h2>
 
   <div class="skills-container">
-
+  
     <div class="skill-box">
-      <div class="skill-title">
-        <span>Power BI</span>
-        <span>90%</span>
-      </div>
-      <div class="skill-bar">
+  
+  <div class="skill-title">
+  <span>Power BI</span>
+  <span>90%</span>
+  </div>
+    
+  <div class="skill-bar">
+        
         <div class="skill-fill" data-width="90%"></div>
         <div class="skill-fill" data-width="85%"></div>
         <div class="skill-fill" data-width="80%"></div>
@@ -1643,6 +1640,30 @@ counters.forEach(counter=>{
 });
 
 </script>
+  <script>
+
+function animateSkills(){
+
+  const skills = document.querySelectorAll(".skill-fill");
+
+  skills.forEach(skill => {
+
+    const width = skill.getAttribute("data-width");
+
+    skill.style.width = "0";
+
+    setTimeout(()=>{
+      skill.style.width = width;
+    },200);
+
+  });
+}
+
+/* RUN ON PAGE LOAD */
+window.addEventListener("load", animateSkills);
+
+</script>
+
 
 
 
