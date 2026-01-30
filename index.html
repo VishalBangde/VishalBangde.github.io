@@ -826,6 +826,61 @@ nav a.active{
 .project-card h3{
   color:#6f4e37;
 }
+   /* ===== ACHIEVEMENTS ===== */
+
+#achievements{
+  background:#f9f7f5;
+}
+
+.achievements-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.achievement-card{
+
+  background:#ffffff;
+  padding:35px 25px;
+
+  border-radius:14px;
+
+  text-align:center;
+
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+
+  transition:.35s;
+
+  opacity:0;
+  transform:translateY(40px);
+}
+
+/* Hover Effect */
+.achievement-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Number */
+.achievement-card h1{
+  font-size:42px;
+  color:#6f4e37;
+  margin-bottom:10px;
+}
+
+/* Text */
+.achievement-card p{
+  color:#444;
+  font-weight:600;
+}
+
+/* Animation Class */
+.achievement-card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
 
 
 
@@ -859,7 +914,8 @@ nav a.active{
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
   <a href="#experience">Experience</a>
- <a href="#services">Services</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#services">Services</a>
    <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 
@@ -1131,6 +1187,46 @@ nav a.active{
 
  
 
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+
+  <h2>Key Achievements</h2>
+
+  <div class="achievements-container">
+
+    <div class="achievement-card">
+      <h1>8+</h1>
+      <p>Years in Data Analytics</p>
+    </div>
+
+    <div class="achievement-card">
+      <h1>70+</h1>
+      <p>Power BI Dashboards Delivered</p>
+    </div>
+
+    <div class="achievement-card">
+      <h1>40%</h1>
+      <p>Average Reporting Time Reduced</p>
+    </div>
+
+    <div class="achievement-card">
+      <h1>20+</h1>
+      <p>Enterprise Solutions Implemented</p>
+    </div>
+
+    <div class="achievement-card">
+      <h1>15+</h1>
+      <p>Executive-Level Reports</p>
+    </div>
+
+    <div class="achievement-card">
+      <h1>10+</h1>
+      <p>Technologies Mastered</p>
+    </div>
+
+  </div>
+
+</section>
   
   
 
@@ -1411,6 +1507,27 @@ window.addEventListener("scroll", () => {
 
   });
 
+});
+
+</script>
+<script>
+
+const achievementCards = document.querySelectorAll(".achievement-card");
+
+const achievementObserver = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+
+  });
+
+},{ threshold:0.3 });
+
+achievementCards.forEach(card=>{
+  achievementObserver.observe(card);
 });
 
 </script>
