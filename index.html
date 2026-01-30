@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>Vishal Bangde | Portfolio</title>
- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
 
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -249,10 +250,7 @@ footer{
 }
 
 /* Role */
-.home-content 
-   <h2>
-  <span id="typing"></span>
-</h2>
+<h2 id="typing"></h2>
 
 /* Description */
 .home-content p{
@@ -1221,36 +1219,27 @@ document.querySelector('a[href="#skills"]')
 
 </script>
 
-  <script>
+<script>
 
-document.addEventListener("DOMContentLoaded", function(){
+window.onload = function(){
 
-  const typingElement = document.querySelector("#typing");
-
-  // Prevent error if element missing
-  if(typingElement){
-
-    new Typed("#typing", {
-
+   new Typed("#typing", {
       strings: [
         "Senior Power BI Developer",
         "Microsoft Fabric Specialist",
         "Data Analytics Expert",
         "Business Intelligence Professional"
       ],
-
-      typeSpeed: 55,
-      backSpeed: 30,
-      backDelay: 1500,
+      typeSpeed: 60,
+      backSpeed: 35,
+      backDelay: 1400,
       loop: true
+   });
 
-    });
-
-  }
-
-});
+};
 
 </script>
+
 
 
 
