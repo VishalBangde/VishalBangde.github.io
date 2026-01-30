@@ -21,15 +21,23 @@ body{
 /* ===== SIDEBAR ===== */
 nav{
   position:fixed;
-  top:0;
-  left:0;
-  width:260px;
-  height:100vh;
+  top:10px;
+  left:10px;
 
-  background:linear-gradient(180deg,#3e2723,#1b1b1b);
+  width:250px;
+  height:95vh;
+
+  background:rgba(255,255,255,0.08); /* glass color */
+
+  backdrop-filter:blur(12px); /* blur effect */
+
+  border-radius:15px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
 
   overflow-y:auto;
 }
+
 
 /* Smooth scrollbar */
 nav::-webkit-scrollbar{
@@ -42,7 +50,7 @@ nav::-webkit-scrollbar-thumb{
 
 /* ===== MOVE WEBSITE RIGHT ===== */
 body{
-  padding-left:260px;
+  padding-left:270px;
 }
 
 /* ===== PROFILE ===== */
@@ -99,9 +107,10 @@ nav a{
 }
 
 nav a:hover{
-  background:rgba(255,255,255,0.08);
-  padding-left:35px;
+  background:rgba(255,255,255,0.2);
+  border-radius:8px;
 }
+
 
 /* ===== SECTIONS ===== */
 section{
