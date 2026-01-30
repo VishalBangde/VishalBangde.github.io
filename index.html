@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Vishal Bangde | Portfolio</title>
+  <title>Vishal Bangde | Portfolio</title>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-/* GLOBAL */
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <style>
+
+/* ===== GLOBAL ===== */
 body{
   margin:0;
-  font-family:Arial, sans-serif;
+  font-family: Arial, sans-serif;
   scroll-behavior:smooth;
-  padding-left:260px;
 }
 
-/* SIDEBAR */
+/* ===== SIDEBAR ===== */
 nav{
   position:fixed;
   top:0;
   left:0;
   width:260px;
   height:100vh;
+
   background:linear-gradient(180deg,#3e2723,#1b1b1b);
+
   overflow-y:auto;
 }
 
+/* Smooth scrollbar */
+nav::-webkit-scrollbar{
+  width:6px;
+}
+nav::-webkit-scrollbar-thumb{
+  background:#6f4e37;
+  border-radius:10px;
+}
+
+/* ===== MOVE WEBSITE RIGHT ===== */
+body{
+  padding-left:260px;
+}
+
+/* ===== PROFILE ===== */
 .sidebar-profile{
   text-align:center;
   padding:20px;
@@ -36,200 +53,163 @@ nav{
 }
 
 .sidebar-profile img{
-  width:130px;
-  height:130px;
+  width:135px;
+  height:135px;
   border-radius:50%;
+
   object-fit:cover;
-  border:4px solid rgba(255,255,255,0.2);
+  object-position:center 20%;
+
+  border:4px solid rgba(255,255,255,0.25);
 }
+
 
 .sidebar-profile h2{
   color:white;
+  margin:10px 0 5px;
 }
 
 .sidebar-profile p{
   color:#c7b299;
+  font-size:14px;
 }
 
+/* Contact button */
 .sidebar-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 16px;
   background:#6f4e37;
   color:white;
-  padding:8px 16px;
   border-radius:20px;
   text-decoration:none;
 }
 
-/* MENU */
+.sidebar-btn:hover{
+  background:#8b5e3c;
+}
+
+/* ===== MENU ===== */
 nav a{
   display:block;
   color:#e0e0e0;
   padding:14px 25px;
   text-decoration:none;
+  transition:.3s;
 }
 
-nav a:hover,
-nav a.active{
-  background:#c7a17a;
-  color:white;
+nav a:hover{
+  background:rgba(255,255,255,0.08);
+  padding-left:35px;
 }
 
-/* SECTIONS */
+/* ===== SECTIONS ===== */
 section{
-  padding:70px;
+  padding:60px;
   max-width:1100px;
   margin:auto;
 }
 
 h2{
-  text-align:center;
   color:#0078D4;
-}
-
-/* HOME */
-.ultra-home{
-  min-height:75vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(135deg,#2d1b16,#0f0f0f);
-}
-
-.ultra-card{
-  background:rgba(255,255,255,0.05);
-  padding:60px;
-  border-radius:18px;
-  text-align:center;
-  color:white;
-}
-
-.btn-primary{
-  background:#6f4e37;
-  padding:12px 30px;
-  border-radius:30px;
-  color:white;
-  text-decoration:none;
-}
-
-.btn-secondary{
-  border:2px solid #6f4e37;
-  padding:10px 25px;
-  border-radius:30px;
-  color:#d7ccc8;
-  text-decoration:none;
-}
-
-/* ABOUT */
-.about-container{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-}
-
-.about-card{
-  background:#fafafa;
-  padding:30px;
-  border-radius:12px;
-}
-
-.stat-box{
-  background:#111;
-  color:white;
-  padding:25px;
-  border-radius:10px;
   text-align:center;
 }
 
-/* SKILLS */
-.skill{
-  margin:20px 0;
-}
+/* ===== SKILLS ===== */
+.skill{margin:10px 0;}
 
 .bar{
-  height:12px;
   background:#ddd;
   border-radius:20px;
 }
 
 .fill{
-  height:100%;
   background:#0078D4;
-  border-radius:20px;
-}
-
-/* EXPERIENCE */
-.timeline-content{
-  background:#fff;
-  padding:25px;
-  border-radius:12px;
-  margin-bottom:20px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-/* SERVICES */
-.services-container{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-
-.service-box{
-  background:#111;
+  padding:6px;
   color:white;
-  padding:30px;
-  border-radius:14px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+/* ===== CARDS ===== */
+.card{
+  background:#f9f9f9;
+  padding:20px;
+  margin:15px 0;
+  border-radius:8px;
+}
+
+/* ===== SERVICES ===== */
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.service-card{
+  background:#f9f9f9;
+  padding:20px;
+  border-radius:8px;
   text-align:center;
 }
 
-/* PROJECTS */
-.projects-container{
+/* ===== CONTACT BUTTON ===== */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:#0078D4;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+.btn:hover{
+  background:#005a9e;
+}
+
+/* ===== SOCIAL ===== */
+.social-icons-text a{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin:8px;
+  padding:10px 16px;
+  background:#0078D4;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+}
+
+.social-icons-text a:hover{
+  background:#005a9e;
+}
+
+.social-icons-text a[href*="wa.me"]{
+  background:#25D366;
+}
+
+.social-icons-text a[href*="wa.me"]:hover{
+  background:#1ebe5d;
+}
+
+/* ===== PERSONAL INFO ===== */
+.personal-info{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:25px;
+  gap:15px;
 }
 
-.project-card{
+.info-item{
   background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  padding:12px 18px;
+  border-radius:6px;
+  box-shadow:0 1px 4px rgba(0,0,0,.1);
 }
 
-.project-card h3{
-  color:#6f4e37;
-}
-
-.project-card p{
-  color:#444;
-}
-
-/* CONTACT */
-.contact-ultra{
-  background:linear-gradient(135deg,#2d1b16,#0f0f0f);
-  color:white;
-  text-align:center;
-}
-
-.contact-btn{
-  padding:14px 28px;
-  border-radius:40px;
-  color:white;
-  text-decoration:none;
-  margin:10px;
-  display:inline-block;
-}
-
-.email{background:#6f4e37;}
-.linkedin{background:#0077b5;}
-.whatsapp{background:#25D366;}
-
-.resume-btn{
-  display:inline-block;
-  margin-top:30px;
-  padding:16px 38px;
-  border-radius:50px;
-  background:linear-gradient(135deg,#c7a17a,#6f4e37);
-  color:white;
-  text-decoration:none;
+.info-item span{
+  color:#0078D4;
+  font-weight:bold;
 }
 
 footer{
@@ -238,159 +218,1191 @@ footer{
   text-align:center;
   padding:20px;
 }
+   /* ===== PREMIUM HOME ===== */
+
+.premium-home{
+  background:linear-gradient(135deg,#3e2723,#1b1b1b);
+  padding:100px 20px;
+  display:flex;
+  justify-content:center;
+}
+
+/* Glass Card */
+.home-content{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+
+  padding:50px;
+  border-radius:14px;
+
+  max-width:750px;
+  text-align:center;
+
+  box-shadow:0 8px 30px rgba(0,0,0,0.4);
+}
+
+/* Name */
+.home-content h1{
+  color:white;
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+/* Role */
+<h2 class="hero-role">
+  Senior Power BI Developer | Microsoft Fabric Specialist | Data Analytics Expert
+</h2>
+
+
+/* Description */
+.home-content p{
+  color:#e0e0e0;
+  line-height:1.7;
+}
+
+/* Premium Button */
+.premium-btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 26px;
+
+  background:#6f4e37;
+  color:white;
+
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+
+  transition:.3s;
+}
+
+.premium-btn:hover{
+  background:#8b5e3c;
+  transform:translateY(-3px);
+}
+   /* ===== ULTRA HOME ===== */
+
+.ultra-home{
+  min-height:75vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:80px 20px;
+
+  background:
+  radial-gradient(circle at 20% 30%, rgba(111,78,55,0.5), transparent 40%),
+  radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05), transparent 40%),
+  linear-gradient(135deg,#2d1b16,#0f0f0f);
+}
+   .ultra-card{
+
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(14px);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  padding:60px;
+  border-radius:18px;
+
+  max-width:850px;
+  text-align:center;
+
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+.ultra-card h1{
+  font-size:52px;
+  color:white;
+  margin-bottom:12px;
+  letter-spacing:1px;
+}
+
+.ultra-card h2{
+  color:#d7ccc8;
+  font-weight:300;
+  margin-bottom:20px;
+}
+
+.ultra-card h2 span{
+  color:#c7a17a;
+}
+
+.ultra-card p{
+  color:#e0e0e0;
+  line-height:1.8;
+  font-size:17px;
+}
+.hero-buttons{
+  margin-top:35px;
+}
+
+/* Primary */
+.btn-primary{
+  background:#6f4e37;
+  color:white;
+  padding:14px 32px;
+  border-radius:40px;
+  text-decoration:none;
+  margin-right:12px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.btn-primary:hover{
+  background:#8b5e3c;
+  transform:translateY(-4px);
+}
+
+/* Secondary */
+.btn-secondary{
+  background:#6f4e37;
+  color:white;
+  padding:14px 32px;
+  border-radius:40px;
+  text-decoration:none;
+  margin-right:12px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.btn-secondary:hover{
+  background:#8b5e3c;
+  transform:translateY(-4px);
+}
+
+   .services-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:50px;
+}
+.service-box{
+
+  background:#111;
+  color:white;
+
+  padding:30px;
+  border-radius:14px;
+
+  text-align:center;
+
+  transition:0.4s;
+  cursor:pointer;
+
+  border:1px solid rgba(255,255,255,0.05);
+}
+.service-box i{
+  font-size:32px;
+  margin-bottom:15px;
+  color:#c7a17a;
+}
+.service-box:hover{
+
+  transform:translateY(-12px) scale(1.03);
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.6);
+
+  background:linear-gradient(145deg,#1b1b1b,#000);
+}
+.service-box h3{
+  margin-bottom:10px;
+}
+.service-box{
+  animation:fadeUp 0.8s ease forwards;
+}
+
+   .about-container{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;
+  margin-top:40px;
+}
+
+   .about-card{
+  background:rgba(255,255,255,0.04);
+  padding:40px;
+  border-radius:14px;
+
+  backdrop-filter:blur(8px);
+
+  border:1px solid rgba(255,255,255,0.06);
+
+  transition:.4s;
+}
+
+.about-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+   .about-card h3{
+  color:#c7a17a;
+  margin-bottom:15px;
+}
+
+.about-card p{
+  color:#000;
+  line-height:1.8;
+}
+
+   .about-stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+   .stat-box{
+
+  background:#111;
+  color:white;
+
+  padding:25px;
+  border-radius:12px;
+  text-align:center;
+
+  transition:.4s;
+}
+
+.stat-box:hover{
+  transform:translateY(-10px);
+  background:linear-gradient(145deg,#1b1b1b,#000);
+}
+
+   .stat-box h1{
+  color:#c7a17a;
+  font-size:34px;
+  margin-bottom:5px;
+}
+.skills-container{
+  max-width:900px;
+  margin:50px auto;
+}
+.skill-box{
+  margin-bottom:30px;
+
+  opacity:0;
+  transform:translateY(40px);
+
+  animation:slideUp 1s ease forwards;
+}
+@keyframes slideUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+.skill-box:hover{
+  transform:translateY(-6px);
+  transition:.3s;
+}
+
+   
+.skill-title{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:8px;
+  font-weight:bold;
+}
+.skill-bar{
+  width:100%;
+  height:12px;
+  background:#111;
+  border-radius:20px;
+  overflow:hidden;
+}
+.skill-fill{
+  height:100%;
+  border-radius:20px;
+
+  background:linear-gradient(270deg,#c7a17a,#6f4e37,#c7a17a);
+  background-size:200% 200%;
+
+  width:0;   /* VERY IMPORTANT */
+
+  box-shadow:0 0 10px rgba(199,161,122,0.7);
+
+  transition:width 2s ease;
+}
+
+
+   
+.powerbi{ width:90%; }
+.dax{ width:85%; }
+.sql{ width:80%; }
+.fabric{ width:75%; }
+.platform{ width:70%; }
+.modeling{ width:85%; }
+@keyframes fillBar{
+  from{
+    width:0;
+  }
+}
+
+
+
+
+.project-card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.5);
+}
+
+
+
+   .project-card:hover{
+
+  transform:translateY(-12px) scale(1.02);
+
+  box-shadow:0 25px 60px rgba(0,0,0,0.6);
+}
+
+.project-content{
+  padding:25px;
+}
+.project-content h3{
+  margin-bottom:10px;
+  color:#c7a17a;
+}
+.project-content p{
+  color:#ddd;
+  line-height:1.7;
+}
+
+  
+
+.tech-tags span{
+  display:inline-block;
+  background:#111;
+  padding:6px 12px;
+  margin:4px;
+  border-radius:20px;
+  font-size:12px;
+}
+.project-card{
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 1s ease forwards;
+}
+   .projects-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+.project-card{
+  background:#ffffff;
+  padding:25px;
+  border-radius:12px;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+  transition:0.3s;
+}
+.project-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+.project-card h3{
+  color:#6f4e37;
+}
+
+.timeline{
+  position:relative;
+  max-width:900px;
+  margin:50px auto;
+}
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:20px;
+  top:0;
+  width:4px;
+  height:100%;
+  background:#6f4e37;
+}
+.timeline-item{
+  margin-left:60px;
+  margin-bottom:40px;
+}
+.timeline-content{
+  background:#ffffff;
+  padding:25px;
+  border-radius:12px;
+
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+  transition:.3s;
+}
+.timeline-content:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+.timeline-content h3{
+  color:#6f4e37;
+}
+.timeline-content h4{
+  color:#777;
+  font-weight:normal;
+  margin-bottom:10px;
+}
+.timeline-content ul{
+  padding-left:20px;
+  line-height:1.7;
+}
+
+   .contact-ultra{
+
+  background:
+  linear-gradient(135deg,#2d1b16,#0f0f0f);
+
+  padding:120px 20px;
+  display:flex;
+  justify-content:center;
+}
+.contact-card{
+
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(14px);
+
+  padding:60px;
+  border-radius:18px;
+
+  text-align:center;
+  max-width:750px;
+
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+
+  animation:fadeUp 1s ease;
+}
+.contact-card h2{
+  color:white;
+  font-size:38px;
+  margin-bottom:15px;
+}
+.contact-card p{
+  color:#ddd;
+  margin-bottom:35px;
+  line-height:1.7;
+}
+.contact-buttons{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.contact-btn{
+
+  padding:14px 28px;
+  border-radius:40px;
+
+  text-decoration:none;
+  color:white;
+
+  font-weight:bold;
+
+  transition:.35s;
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.email{
+  background:#6f4e37;
+}
+
+.linkedin{
+  background:#0077b5;
+}
+
+.whatsapp{
+  background:#25D366;
+}
+.contact-btn:hover{
+
+  transform:translateY(-6px) scale(1.05);
+
+  box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+.contact-btn{
+  box-shadow:0 0 15px rgba(255,255,255,0.08);
+}
+.resume-btn{
+
+  display:inline-block;
+  margin-top:40px;
+
+  padding:16px 38px;
+
+  font-size:18px;
+  font-weight:bold;
+
+  color:white;
+  text-decoration:none;
+
+  border-radius:50px;
+
+  background:linear-gradient(135deg,#c7a17a,#6f4e37);
+
+  transition:.4s;
+
+  box-shadow:0 0 20px rgba(199,161,122,0.6);
+}
+.resume-btn:hover{
+
+  transform:translateY(-8px) scale(1.07);
+
+  box-shadow:0 20px 45px rgba(0,0,0,0.6);
+}
+@keyframes pulse{
+
+  0%{
+    box-shadow:0 0 15px rgba(199,161,122,0.6);
+  }
+
+  50%{
+    box-shadow:0 0 35px rgba(199,161,122,1);
+  }
+
+  100%{
+    box-shadow:0 0 15px rgba(199,161,122,0.6);
+  }
+
+}
+
+.resume-btn{
+  animation:pulse 2.5s infinite;
+}
+
+.hero-role{
+  font-size:28px;
+  color:#c7a17a;
+  font-weight:500;
+  margin-top:10px;
+}
+
+nav a.active{
+
+  background:#c7a17a;
+  color:#fff;
+
+  border-radius:6px;
+
+  padding-left:30px;
+
+  transition:.3s;
+}
+
+   .personal-details{
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+
+  margin-top:30px;
+}
+.detail-box{
+
+  background:#ffffff;
+  padding:15px;
+
+  border-radius:10px;
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+
+}
+.detail-box strong{
+  color:#6f4e37;
+}
+.detail-box:hover{
+  transform:translateY(-4px);
+  transition:.2s;
+}
+
+   .projects-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+.project-card{
+
+  background:#ffffff;
+  padding:20px;
+
+  border-radius:10px;
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+}
+.project-card:hover{
+  transform:translateY(-5px);
+  transition:.2s;
+}
+.project-card h3{
+  color:red;
+}
+
+
+
+
+
+
+
+
+
 
 </style>
+  
+
+
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
+<!-- NAV -->
 <nav>
+  <!-- PROFILE SECTION -->
+  <div class="sidebar-profile">
+    <img src="profile.jpg" alt="Vishal Bangde">
+    <h2>Vishal Bangde</h2>
+    <p>Power BI Developer<br>8+ Years Experience</p>
+    <a href="#contact" class="sidebar-btn">Contact Me</a>
+  </div>
 
-<div class="sidebar-profile">
-<img src="profile.jpg">
-<h2>Vishal Bangde</h2>
-<p>Power BI Developer<br>8+ Years Experience</p>
-<a href="#contact" class="sidebar-btn">Contact Me</a>
-</div>
+  <!-- MENU -->
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+ <a href="#services">Services</a>
+   <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
 
 </nav>
-
-<!-- HOME -->
+<!-- ULTRA HOME -->
 <section id="home" class="ultra-home">
-<div class="ultra-card">
-<h1>Vishal Bangde</h1>
-<h2>Senior Power BI Developer | Data Analytics Expert</h2>
-<p>Transforming complex data into strategic insights.</p>
 
-<a href="#contact" class="btn-primary">Hire Me</a>
-<a href="#projects" class="btn-secondary">View Projects</a>
-</div>
+  <div class="ultra-card">
+
+      <h1>Vishal Bangde</h1>
+
+      <h2>
+        Senior Power BI Developer <span>| Data Analytics Expert</span>
+      </h2>
+
+      <p>
+        I design powerful business intelligence solutions that transform raw data 
+        into strategic insights. With <b>8+ years</b> of experience, I help organizations 
+        make faster, smarter, and data-driven decisions.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Connect</a>
+        <a href="#services" class="btn-secondary">Services</a>
+      </div>
+
+  </div>
+
 </section>
 
-<!-- ABOUT -->
+
+
+
+
+
+<!-- PREMIUM ABOUT -->
 <section id="about">
-<h2>About Me</h2>
 
-<div class="about-container">
+  <h2>About Me</h2>
 
-<div class="about-card">
-<p>I am a results-driven Power BI Developer with 8+ years of experience delivering enterprise BI solutions.</p>
+  <div class="about-container">
+
+    <!-- LEFT -->
+    <div class="about-card">
+      <h3>Senior Power BI Developer</h3>
+
+      <p>
+        I am a results-driven <b>Power BI Developer with 8+ years of experience</b> 
+        delivering end-to-end Business Intelligence solutions that transform 
+        complex data into actionable insights.
+      </p>
+
+      <p>
+        My expertise lies in building high-performance dashboards, optimizing data models,
+        and enabling leadership teams to make confident, data-driven decisions.
+      </p>
+
+      <p>
+        I specialize in <b>Power BI, Microsoft Fabric, SQL, DAX, and Data Modeling</b>,
+        consistently following best practices in performance, governance, and UX design.
+      </p>
+    </div>
+
+    <!-- RIGHT STATS -->
+    <div class="about-stats">
+
+      <div class="stat-box">
+        <h1>8+</h1>
+        <p>Years Experience</p>
+      </div>
+
+      <div class="stat-box">
+        <h1>70+</h1>
+        <p>Dashboards Delivered</p>
+      </div>
+
+      <div class="stat-box">
+        <h1>20+</h1>
+        <p>Business Solutions</p>
+      </div>
+
+      <div class="stat-box">
+        <h1>15+</h1>
+        <p>Tools & Technologies</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- PERSONAL DETAILS -->
+<h2>Personal Details</h2>
+
+<div class="personal-details">
+
+  <div class="detail-box">
+    <strong>Name:</strong> Vishal Chandrakant Bangde
+  </div>
+
+  <div class="detail-box">
+    <strong>Experience:</strong> 8+ Years
+  </div>
+
+  <div class="detail-box">
+    <strong>Location:</strong> Nagpur, Maharashtra
+  </div>
+
+  <div class="detail-box">
+    <strong>Education:</strong> Bachelor of Engineering (CSE)
+  </div>
+
+  <div class="detail-box">
+    <strong>Email:</strong> bangdevishal07@gmail.com
+  </div>
+
+  <div class="detail-box">
+    <strong>Contact No:</strong> +91 7020292767
+  </div>
+
 </div>
 
-<div class="stat-box">
-<h1>50+</h1>
-Dashboards Delivered
-</div>
 
-</div>
 </section>
 
-<!-- SKILLS -->
+
+<!-- PREMIUM SKILLS -->
 <section id="skills">
-<h2>Skills</h2>
 
-<div class="skill">
-Power BI
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-</div>
+  <h2>Technical Expertise</h2>
 
-<div class="skill">
-DAX
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-</div>
+  <div class="skills-container">
+
+    <div class="skill-box">
+      <div class="skill-title">
+        <span>Power BI</span>
+        <span>90%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-fill" data-width="90%"></div>
+        <div class="skill-fill" data-width="85%"></div>
+        <div class="skill-fill" data-width="80%"></div>
+        <div class="skill-fill" data-width="75%"></div>
+        <div class="skill-fill" data-width="70%"></div>
+      </div>
+     </div>
+
+    <div class="skill-box">
+      <div class="skill-title">
+        <span>DAX</span>
+        <span>85%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-fill dax"></div>
+      </div>
+    </div>
+
+    <div class="skill-box">
+      <div class="skill-title">
+        <span>SQL Server</span>
+        <span>80%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-fill sql"></div>
+      </div>
+    </div>
+
+    <div class="skill-box">
+      <div class="skill-title">
+        <span>Microsoft Fabric</span>
+        <span>75%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-fill fabric"></div>
+      </div>
+    </div>
+
+    <div class="skill-box">
+      <div class="skill-title">
+        <span>Power Platform</span>
+        <span>70%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-fill platform"></div>
+      </div>
+    </div>
+
+    <div class="skill-box">
+      <div class="skill-title">
+        <span>Data Modeling</span>
+        <span>85%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-fill modeling"></div>
+      </div>
+    </div>
+
+  </div>
 
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-<h2>Experience</h2>
 
-<div class="timeline-content">
-<h3>Sr. Consultant</h3>
-<p>Incresol Software Services Pvt Ltd</p>
-</div>
+  <h2>Professional Experience</h2>
+
+  <div class="timeline">
+
+    <!-- Item -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>Sr. Consultant (Power BI)</h3>
+        <h4>Incresol Software Services Pvt Ltd • Oct 2025 – Present</h4>
+
+        <ul>
+          <li>Design enterprise Power BI dashboards for Sales, Finance, and Operations.</li>
+          <li>Build optimized data models using star schema.</li>
+          <li>Develop advanced SQL queries and ETL workflows.</li>
+          <li>Manage Power BI Service, gateways, and scheduled refresh.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Item -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>Power BI Developer</h3>
+        <h4>Camsdata Technologies Pvt Ltd • Mar 2024 – Jun 2024</h4>
+
+        <ul>
+          <li>Built scalable analytics solutions using Microsoft Fabric.</li>
+          <li>Designed hotel performance dashboards tracking revenue and occupancy.</li>
+          <li>Implemented Row-Level Security based on roles.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Item -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>Sr. Power BI Developer</h3>
+        <h4>Neoquant Solutions Pvt Ltd • Feb 2024 – Nov 2024</h4>
+
+        <ul>
+          <li>Created interactive dashboards for leadership teams.</li>
+          <li>Developed complex DAX metrics including YTD and rolling averages.</li>
+          <li>Integrated SQL Server, Excel, and SharePoint data sources.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Item -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>BI / Power BI Developer</h3>
+        <h4>ICEICO Technologies Pvt Ltd • Nov 2017 – Jan 2023</h4>
+
+        <ul>
+          <li>Developed MIS reports and automated dashboards.</li>
+          <li>Wrote SQL queries for business reporting.</li>
+          <li>Supported enterprise BI implementations.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 
 </section>
 
-<!-- SERVICES -->
+ 
+
+  
+  
+
+ <!-- PREMIUM SERVICES -->
 <section id="services">
-<h2>Services</h2>
+  <h2>What I Offer</h2>
 
-<div class="services-container">
+  <div class="services-container">
 
-<div class="service-box">
-<i class="fas fa-chart-line"></i>
-<h3>Dashboard Development</h3>
-</div>
+    <div class="service-box">
+      <i class="fas fa-chart-line"></i>
+      <h3>Power BI Dashboard Development</h3>
+      <p>Interactive, visually compelling dashboards designed for executive decision-making.</p>
+    </div>
 
-<div class="service-box">
-<i class="fas fa-database"></i>
-<h3>Data Modeling</h3>
-</div>
+    <div class="service-box">
+      <i class="fas fa-database"></i>
+      <h3>Data Modeling</h3>
+      <p>High-performance star schema models optimized for scalability and speed.</p>
+    </div>
 
-</div>
+    <div class="service-box">
+      <i class="fas fa-brain"></i>
+      <h3>Advanced DAX Solutions</h3>
+      <p>Complex KPIs, time intelligence, forecasting metrics, and optimized calculations.</p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-sync-alt"></i>
+      <h3>ETL & Data Transformation</h3>
+      <p>Clean, structured data pipelines using Power Query, Fabric, and SQL.</p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-cloud"></i>
+      <h3>Microsoft Fabric</h3>
+      <p>Unified analytics architecture using Lakehouse, Data Factory, and Real-Time insights.</p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-lock"></i>
+      <h3>Row-Level Security</h3>
+      <p>Enterprise-grade data security ensuring users see only what they should.</p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-tachometer-alt"></i>
+      <h3>Performance Optimization</h3>
+      <p>Reduce report load time and improve query efficiency dramatically.</p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-cogs"></i>
+      <h3>Power BI Report Server</h3>
+      <p>On-premise reporting solutions aligned with governance policies.</p>
+    </div>
+
+  </div>
 </section>
 
-<!-- ⭐ PROJECTS (NOW FULLY VISIBLE) -->
-<section id="projects">
-<h2>Featured Projects</h2>
+   <section id="projects">
 
-<div class="projects-container">
+  <h2>Projects</h2>
 
-<div class="project-card">
-<h3>Sales Analytics Dashboard</h3>
-<p>Leadership-level dashboard enabling revenue and regional performance tracking.</p>
-</div>
+  <div class="projects-container">
 
-<div class="project-card">
-<h3>Financial Reporting Solution</h3>
-<p>Budget vs Actual reporting improving financial visibility.</p>
-</div>
+    <div class="project-card">
+      <h3>Sales Analytics Dashboard</h3>
+      <p>
+        Designed an interactive Power BI dashboard to track revenue,
+        profit margins, regional performance, and sales trends,
+        enabling leadership to make data-driven decisions.
+      </p>
+    </div>
 
-<div class="project-card">
-<h3>KPI Monitoring Dashboard</h3>
-<p>Operational dashboard helping teams track SLA and productivity.</p>
-</div>
+    <div class="project-card">
+      <h3>Financial Performance Report</h3>
+      <p>
+        Developed a comprehensive finance report analyzing
+        Budget vs Actuals, cash flow, and expense patterns,
+        improving financial visibility for stakeholders.
+      </p>
+    </div>
 
-</div>
+    <div class="project-card">
+      <h3>KPI & SLA Monitoring Dashboard</h3>
+      <p>
+        Built an operational dashboard to monitor KPIs,
+        SLA adherence, and team productivity,
+        helping management identify performance gaps quickly.
+      </p>
+    </div>
+
+  </div>
+
 </section>
 
-<!-- CONTACT -->
+
+  
+<!-- SHOWSTOPPER CONTACT -->
 <section id="contact" class="contact-ultra">
-<h2>Let's Work Together</h2>
 
-<a href="mailto:bangdevishal07@gmail.com" class="contact-btn email">
-Email
+  <div class="contact-card">
+
+      <h2>Let's Work Together</h2>
+
+      <p>
+        Have a project, opportunity, or role in mind?  
+        I’m always open to discussing how data can drive smarter decisions.
+      </p>
+
+      <div class="contact-buttons">
+
+        <a href="mailto:bangdevishal07@gmail.com" class="contact-btn email">
+          <i class="fas fa-envelope"></i> Email Me
+        </a>
+
+        <a href="https://linkedin.com/in/vishal-bangde-66268a2a4"
+           target="_blank"
+           class="contact-btn linkedin">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+
+        <a href="https://wa.me/917020292767"
+           target="_blank"
+           class="contact-btn whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+
+      </div>
+    
+    <a href="Vishal_Bangde_Resume.pdf"
+   download
+   class="resume-btn">
+
+   <i class="fas fa-download"></i>
+   Download Resume
+
 </a>
 
-<a href="https://linkedin.com" class="contact-btn linkedin">
-LinkedIn
-</a>
-
-<a href="https://wa.me/917020292767" class="contact-btn whatsapp">
-WhatsApp
-</a>
-
-<br>
-
-<a href="Vishal_Bangde_Resume.pdf" download class="resume-btn">
-Download Resume
-</a>
+  </div>
 
 </section>
+
+
+
+
 
 <footer>
-© 2026 Vishal Bangde | Portfolio
+  © 2026 Vishal Bangde | Portfolio
 </footer>
+
+
+  <script>
+
+const skills = document.querySelectorAll(".skill-fill");
+
+const observer = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+
+      skills.forEach(skill => {
+
+        skill.classList.remove("animate-skill");
+
+        void skill.offsetWidth; // reset animation
+
+        skill.classList.add("animate-skill");
+
+      });
+
+    }
+
+  });
+
+},{ threshold:0.5 });
+
+observer.observe(document.querySelector("#skills"));
+
+</script>
+
+  <script>
+
+function animateSkills(){
+
+  const skills = document.querySelectorAll(".skill-fill");
+
+  skills.forEach(skill => {
+
+    const targetWidth = skill.getAttribute("data-width");
+
+    skill.style.width = "0"; // reset
+
+    setTimeout(()=>{
+      skill.style.width = targetWidth;
+    },200);
+
+  });
+
+}
+
+
+/* RUN ON PAGE LOAD */
+window.addEventListener("load", animateSkills);
+
+
+/* RUN WHEN CLICKING SKILLS MENU */
+document.querySelector('a[href="#skills"]')
+.addEventListener("click", () => {
+
+  setTimeout(animateSkills,400);
+
+});
+
+</script>
+
+
+<script>
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+  let current = "";
+
+  sections.forEach(section => {
+
+    const sectionTop = section.offsetTop - 120;
+    const sectionHeight = section.clientHeight;
+
+    if(pageYOffset >= sectionTop){
+      current = section.getAttribute("id");
+    }
+
+  });
+
+  navLinks.forEach(link => {
+
+    link.classList.remove("active");
+
+    if(link.getAttribute("href") === "#" + current){
+      link.classList.add("active");
+    }
+
+  });
+
+});
+
+</script>
+
+
+
+
+
 
 </body>
 </html>
