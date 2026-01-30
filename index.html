@@ -11,15 +11,25 @@
 
  <style>
 
-   :root{
+  :root{
     --primary:#39B0B7;
     --primary-dark:#2d8f95;
     --primary-light:#6fd1d6;
-    --bg-dark:#0b1215;
-    --card-bg:#111a1d;
+
+    /* PREMIUM BACKGROUNDS */
+    --bg-dark:#071416;
+    --bg-soft:#0b1c1f;
+    --card-bg:#0f2427;
+
+    /* TEXT */
     --text-white:#ffffff;
     --text-gray:#b6c2c9;
+
+    /* 🔥 THIS IS THE MAGIC */
+    --brown:#39B0B7;
+    --brown-light:#6fd1d6;
 }
+
 
 
 /* ===== GLOBAL ===== */
@@ -37,7 +47,7 @@ nav{
   width:260px;
   height:100vh;
 
-  background:linear-gradient(180deg,#3e2723,#1b1b1b);
+  background:linear-gradient(180deg,#071416,#020808);
 
   overflow-y:auto;
 }
@@ -47,7 +57,7 @@ nav::-webkit-scrollbar{
   width:6px;
 }
 nav::-webkit-scrollbar-thumb{
-  background:#6f4e37;
+  background:var(--primary);
   border-radius:10px;
 }
 
@@ -90,14 +100,14 @@ body{
   display:inline-block;
   margin-top:10px;
   padding:8px 16px;
-  background:#6f4e37;
+  background:var(--primary);
   color:white;
   border-radius:20px;
   text-decoration:none;
 }
 
 .sidebar-btn:hover{
-  background:#8b5e3c;
+  background:var(--primary-dark);
 }
 
 /* ===== MENU ===== */
@@ -232,7 +242,7 @@ footer{
    /* ===== PREMIUM HOME ===== */
 
 .premium-home{
-  background:linear-gradient(135deg,#3e2723,#1b1b1b);
+  background:linear-gradient(135deg,#071416,#1b1b1b);
   padding:100px 20px;
   display:flex;
   justify-content:center;
@@ -275,7 +285,7 @@ footer{
   margin-top:25px;
   padding:12px 26px;
 
-  background:#6f4e37;
+  background:var(--primary);
   color:white;
 
   border-radius:30px;
@@ -286,7 +296,7 @@ footer{
 }
 
 .premium-btn:hover{
-  background:#8b5e3c;
+  background:var(--primary-dark);
   transform:translateY(-3px);
 }
    /* ===== ULTRA HOME ===== */
@@ -303,7 +313,7 @@ footer{
   background:
   radial-gradient(circle at 20% 30%, rgba(111,78,55,0.5), transparent 40%),
   radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05), transparent 40%),
-  linear-gradient(135deg,#2d1b16,#0f0f0f);
+  linear-gradient(135deg,#071416,#020808);
 }
    .ultra-card{
 
@@ -334,7 +344,7 @@ footer{
 }
 
 .ultra-card h2 span{
-  color:#c7a17a;
+  color:var(--primary-light);
 }
 
 .ultra-card p{
@@ -348,7 +358,7 @@ footer{
 
 /* Primary */
 .btn-primary{
-  background:#6f4e37;
+  background:var(--primary);
   color:white;
   padding:14px 32px;
   border-radius:40px;
@@ -359,13 +369,13 @@ footer{
 }
 
 .btn-primary:hover{
-  background:#8b5e3c;
+  background:var(--primary-dark);
   transform:translateY(-4px);
 }
 
 /* Secondary */
 .btn-secondary{
-  background:#6f4e37;
+  background:var(--primary);
   color:white;
   padding:14px 32px;
   border-radius:40px;
@@ -376,7 +386,7 @@ footer{
 }
 
 .btn-secondary:hover{
-  background:#8b5e3c;
+  background:var(--primary-dark);
   transform:translateY(-4px);
 }
 
@@ -404,7 +414,7 @@ footer{
 .service-box i{
   font-size:32px;
   margin-bottom:15px;
-  color:#c7a17a;
+  color:var(--primary-light);
 }
 .service-box:hover{
 
@@ -446,7 +456,7 @@ footer{
 }
 
    .about-card h3{
-  color:#c7a17a;
+  color:var(--primary-light);
   margin-bottom:15px;
 }
 
@@ -479,7 +489,7 @@ footer{
 }
 
    .stat-box h1{
-  color:#c7a17a;
+  color:var(--primary-light);
   font-size:34px;
   margin-bottom:5px;
 }
@@ -524,7 +534,7 @@ footer{
   height:100%;
   border-radius:20px;
 
-  background:linear-gradient(270deg,#c7a17a,#6f4e37,#c7a17a);
+  background:linear-gradient(270deg,#6fd1d6,#39B0B7,#6fd1d6);
   background-size:200% 200%;
 
   width:0;   /* VERY IMPORTANT */
@@ -570,7 +580,7 @@ footer{
 }
 .project-content h3{
   margin-bottom:10px;
-  color:#c7a17a;
+  color:var(--primary-light);
 }
 .project-content p{
   color:#444;
@@ -600,7 +610,7 @@ footer{
   box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 .project-card h3{
-  color:#6f4e37;
+  color:var(--primary);
 }
 
 .timeline{
@@ -615,14 +625,14 @@ footer{
   top:0;
   width:4px;
   height:100%;
-  background:#6f4e37;
+  background:var(--primary);
 }
 .timeline-item{
   margin-left:60px;
   margin-bottom:40px;
 }
 .timeline-content{
-  background:#ffffff;
+  background:var(--card-bg); color:white;
   padding:25px;
   border-radius:12px;
 
@@ -635,7 +645,7 @@ footer{
   box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 .timeline-content h3{
-  color:#6f4e37;
+  color:var(--primary);
 }
 .timeline-content h4{
   color:#777;
@@ -650,7 +660,7 @@ footer{
    .contact-ultra{
 
   background:
-  linear-gradient(135deg,#2d1b16,#0f0f0f);
+  linear-gradient(135deg,#071416,#0f0f0f);
 
   padding:120px 20px;
   display:flex;
@@ -704,7 +714,7 @@ footer{
   gap:8px;
 }
 .email{
-  background:#6f4e37;
+  background:var(--primary);
 }
 
 .linkedin{
@@ -738,11 +748,11 @@ footer{
 
   border-radius:50px;
 
-  background:linear-gradient(135deg,#c7a17a,#6f4e37);
+  background:linear-gradient(135deg,var(--primary-light),var(--primary));
 
   transition:.4s;
 
-  box-shadow:0 0 20px rgba(199,161,122,0.6);
+  box-shadow:0 0 25px rgba(57,176,183,0.6);
 }
 .resume-btn:hover{
 
@@ -772,14 +782,14 @@ footer{
 
 .hero-role{
   font-size:28px;
-  color:#c7a17a;
+  color:var(--primary-light);
   font-weight:500;
   margin-top:10px;
 }
 
 nav a.active{
 
-  background:#c7a17a;
+  background:var(--primary-light);
   color:#fff;
 
   border-radius:6px;
@@ -799,7 +809,7 @@ nav a.active{
 }
 .detail-box{
 
-  background:#ffffff;
+  background:var(--card-bg); color:white;
   padding:15px;
 
   border-radius:10px;
@@ -808,14 +818,14 @@ nav a.active{
 
 }
 .detail-box strong{
-  color:#6f4e37;
+  color:var(--primary);
 }
 .detail-box:hover{
   transform:translateY(-4px);
   transition:.2s;
 }
    .project-card{
-  background:#ffffff;
+  background:var(--card-bg); color:white;
   padding:20px;
   border-radius:10px;
   box-shadow:0 4px 12px rgba(0,0,0,0.08);
@@ -835,7 +845,7 @@ nav a.active{
   transition:.2s;
 }
 .project-card h3{
-  color:#6f4e37;
+  color:var(--primary);
 }
 
    /* ===== ULTRA PREMIUM ACHIEVEMENTS ===== */
@@ -843,7 +853,7 @@ nav a.active{
 #achievements{
 
   background:
-  linear-gradient(135deg,#2d1b16,#0f0f0f);
+  linear-gradient(135deg,#071416,#0f0f0f);
 
   padding:60px 30px;
 }
@@ -891,7 +901,7 @@ nav a.active{
   font-size:28px;
   font-weight:bold;
 
-  background:linear-gradient(270deg,#c7a17a,#6f4e37,#c7a17a);
+  background:linear-gradient(270deg,#6fd1d6,#39B0B7,#6fd1d6);
   background-size:200% 200%;
 
   -webkit-background-clip:text;
@@ -919,7 +929,7 @@ nav a.active{
 .achievement-icon{
 
   font-size:26px;
-  color:#c7a17a;
+  color:var(--primary-light);
   margin-bottom:12px;
 }
 
