@@ -468,11 +468,18 @@ background:#17484d;   /* solid teal */
   line-height:1.8;
 }
 
-   .about-stats{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
+.about-stats{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
 }
+@media(max-width:600px){
+  .about-stats .stat-box{
+    width:180px !important;
+  }
+}
+
 
   .stat-box{
 
@@ -1036,6 +1043,23 @@ section h2{
   justify-content: center;
   align-items: center;
 }
+
+   /* ABOUT SECTION – FORCE SQUARE STAT BOXES */
+.about-stats .stat-box{
+  width: 220px !important;
+  aspect-ratio: 1 / 1;   /* perfect square */
+  height: auto !important;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background:#17484d;    /* your teal */
+  color:#ffffff;
+  border-radius:16px;
+}
+
 
 
 
