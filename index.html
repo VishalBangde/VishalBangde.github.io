@@ -890,12 +890,19 @@ nav a.active{
 
 /* Grid */
 .achievements-container{
-
- display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   justify-items: center;
+  align-items: start;
 }
+
+   @media(max-width:600px){
+  .achievement-card{
+    width:220px !important;
+  }
+}
+
 
 /* Glass Card */
 .achievement-card{
@@ -1016,6 +1023,18 @@ section h2{
    .sidebar-btn,
 .sidebar-btn:hover{
   transition:background 0.3s ease;
+}
+
+   /* FORCE ACHIEVEMENT BOXES TO BE SQUARE */
+.achievement-card{
+  aspect-ratio: 1 / 1;     /* makes it square */
+  width: 260px !important; /* force width */
+  height: auto !important; /* height auto from aspect-ratio */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
