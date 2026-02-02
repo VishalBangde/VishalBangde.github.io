@@ -447,12 +447,13 @@ background:#17484d;   /* solid teal */
   width:100%;
   max-width:100%;
   margin:0;              /* remove centering */
+  border-radius:16px;
 }
 
 
 .about-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 15px 40px rgba(0,0,0,0.5);
+  transform: translateY(-4px);
+  border-radius:16px;   /* KEEP ROUNDED */
 }
 
    .about-card h3{
@@ -1055,6 +1056,10 @@ section h2{
   background:#17484d;    /* your teal */
   color:#ffffff;
   border-radius:16px;
+}
+.about-card,
+.about-card:hover{
+  border-radius:16px !important;
 }
 
 
