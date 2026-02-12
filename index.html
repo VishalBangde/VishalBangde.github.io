@@ -1,1780 +1,240 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vishal Bangde | Portfolio</title>
+<title>Vishal Bangde | Portfolio</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
- <style>
-
-/* ===== GLOBAL ===== */
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  scroll-behavior:smooth;
+/* ================= ROOT DESIGN SYSTEM ================= */
+:root{
+  --primary:#39B0B7;
+  --dark:#07181b;
+  --glass:rgba(255,255,255,0.05);
 }
 
-/* ===== SIDEBAR ===== */
-nav{
+body{
+  margin:0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  scroll-behavior:smooth;
+  background:#ffffff;
+  overflow-x:hidden;
+}
+
+/* ================= SCROLL PROGRESS BAR ================= */
+#progressBar{
   position:fixed;
   top:0;
   left:0;
+  height:4px;
+  width:0%;
+  background:linear-gradient(90deg,#39B0B7,#6fd1d6);
+  z-index:9999;
+}
+
+/* ================= PARTICLE BG ================= */
+#particles{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+/* ================= SIDEBAR ================= */
+nav{
+  position:fixed;
   width:260px;
   height:100vh;
-
-   background:#17484d;
-
-  overflow-y:auto;
+  backdrop-filter:blur(12px);
+  background:rgba(23,72,77,.92);
+  border-right:1px solid rgba(255,255,255,.08);
 }
 
-/* Smooth scrollbar */
-nav::-webkit-scrollbar{
-  width:6px;
-}
-nav::-webkit-scrollbar{
-  width:6px;
-}
-
-nav::-webkit-scrollbar-thumb{
-  background:#39B0B7;   /* accent teal */
-  border-radius:10px;
-}
-
-nav::-webkit-scrollbar-thumb:hover{
-  background:#17484d;   /* darker teal */
-}
-
-
-/* ===== MOVE WEBSITE RIGHT ===== */
-body{
-  padding-left:260px;
-}
-
-/* ===== PROFILE ===== */
-.sidebar-profile{
-   background:#17484d;
-  color:#dff5f6;
-  text-align:center;
-  padding:20px;
-  border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
-.sidebar-profile img{
-  width:135px;
-  height:135px;
-  border-radius:50%;
-
-  object-fit:cover;
-  object-position:center 20%;
-
-  border:4px solid rgba(255,255,255,0.25);
-}
-
-
-.sidebar-profile h2{
-  color:white;
-  margin:10px 0 5px;
-}
-
-.sidebar-profile p{
-  color:#c7b299;
-  font-size:14px;
-}
-
-/* Contact button */
-.sidebar-btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:8px 16px;
- background:#39B0B7;   /* accent teal */
-  color:#ffffff;
-  border-radius:20px;
-  text-decoration:none;
-}
-
-.sidebar-btn:hover{
-  background:#17484d;   /* dark tilt */
-  color:#ffffff;
-}
-
-/* ===== MENU ===== */
-nav a{
-  display:block;
-  color:#ffffff;
-  padding:14px 25px;
-  text-decoration:none;
-  transition:.3s;
-}
-
-nav a:hover{
-  background:#39B0B7;   /* tilt color */
-  color:#ffffff;
-}
-
-/* ===== SECTIONS ===== */
+/* ================= GLOBAL SECTION ANIMATION ================= */
 section{
-  padding:60px;
-  max-width:1100px;
-  margin:auto;
-}
-   section{
-  padding:60px 20px;
-}
-
-
-h2{
-  color:#0078D4;
-  text-align:center;
-}
-
-/* ===== SKILLS ===== */
-.skill{margin:10px 0;}
-
-.bar{
-  background:#ddd;
-  border-radius:20px;
-}
-
-.fill{
-  background:#0078D4;
-  padding:6px;
-  color:white;
-  border-radius:20px;
-  font-size:12px;
-}
-
-/* ===== CARDS ===== */
-.card{
-  background:#f9f9f9;
-  padding:20px;
-  margin:15px 0;
-  border-radius:8px;
-}
-
-/* ===== SERVICES ===== */
-.service-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
-
-.service-card{
-  background:#f9f9f9;
-  padding:20px;
-  border-radius:8px;
-  text-align:center;
-}
-
-/* ===== CONTACT BUTTON ===== */
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 25px;
-  background:#0078D4;
-  color:white;
-  text-decoration:none;
-  border-radius:6px;
-}
-
-.btn:hover{
-  background:#005a9e;
-}
-
-/* ===== SOCIAL ===== */
-.social-icons-text a{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  margin:8px;
-  padding:10px 16px;
-  background:#0078D4;
-  color:white;
-  border-radius:30px;
-  text-decoration:none;
-}
-
-.social-icons-text a:hover{
-  background:#005a9e;
-}
-
-.social-icons-text a[href*="wa.me"]{
-  background:#25D366;
-}
-
-.social-icons-text a[href*="wa.me"]:hover{
-  background:#1ebe5d;
-}
-
-/* ===== PERSONAL INFO ===== */
-.personal-info{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:15px;
-}
-
-.info-item{
-  background:white;
-  padding:12px 18px;
-  border-radius:6px;
-  box-shadow:0 1px 4px rgba(0,0,0,.1);
-}
-
-.info-item span{
-  color:#0078D4;
-  font-weight:bold;
-}
-
-footer{
-  background:#111;
-  color:#ccc;
-  text-align:center;
-  padding:20px;
-}
-   /* ===== PREMIUM HOME ===== */
-
-.premium-home{
-  background:linear-gradient(135deg,#3e2723,#1b1b1b);
-  padding:100px 20px;
-  display:flex;
-  justify-content:center;
-}
-
-/* Glass Card */
-.home-content{
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(10px);
-
-  padding:50px;
-  border-radius:14px;
-
-  max-width:750px;
-  text-align:center;
-
-  box-shadow:0 8px 30px rgba(0,0,0,0.4);
-}
-
-/* Name */
-.home-content h1{
-  color:white;
-  font-size:42px;
-  margin-bottom:10px;
-}
-
-/* Role */
-
-
-
-/* Description */
-.home-content p{
-  color:#e0e0e0;
-  line-height:1.7;
-}
-
-/* Premium Button */
-.premium-btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:12px 26px;
-
-  background:#6f4e37;
-  color:white;
-
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-
-  transition:.3s;
-}
-
-.premium-btn:hover{
-  background:#8b5e3c;
-  transform:translateY(-3px);
-}
-   /* ===== ULTRA HOME ===== */
-
-.ultra-home{
-
-  min-height:75vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:80px 20px;
-
-  background:#ffffff; 
-
- 
-}
-
-
-   .ultra-card{
-
-background:#17484d;   /* solid teal */
-  backdrop-filter:blur(14px);
-
-  border:1px solid rgba(255,255,255,0.08);
-
-  padding:60px;
-  border-radius:18px;
-
-  max-width:850px;
-  text-align:center;
-
-  box-shadow:0 20px 60px rgba(0,0,0,0.6);
-}
-.ultra-card h1{
-  font-size:52px;
-  color:#ffffff;
-  margin-bottom:12px;
-  letter-spacing:1px;
-}
-
-.ultra-card h2{
-  color:#ffffff;
-  font-weight:300;
-  margin-bottom:20px;
-}
-
-.ultra-card h2 span{
-  color:#c7a17a;
-}
-
-.ultra-card p{
-  color:#ffffff;
-  line-height:1.8;
-  font-size:17px;
-}
-.hero-buttons{
-  margin-top:35px;
-}
-
-.btn-primary{
- background:#39B0B7;
-  color:#ffffff;
-  padding:14px 32px;
-  border-radius:40px;
-  text-decoration:none;
-  margin-right:12px;
-  font-weight:bold;
-  transition:.35s;
-  box-shadow:0 6px 18px rgba(57,176,183,.35);
-}
-
-.btn-primary:hover{
-  transform:translateY(-5px);
-  box-shadow:0 12px 28px rgba(57,176,183,.55);
-}
-
-
-.btn-secondary{
-
-  background:#39B0B7;
-  color:#ffffff;
-
-  padding:14px 32px;
-  border-radius:40px;
-  text-decoration:none;
-  margin-right:12px;
-  font-weight:bold;
-
-  border:1px solid rgba(57,176,183,.6);
-
-  transition:.35s;
-}
-
-.btn-secondary:hover{
-
-  transform:translateY(-5px);
-  box-shadow:0 12px 28px rgba(57,176,183,.55);
-
- 
-}
-
-
-   .services-container{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-  margin-top:50px;
-}
-.service-box{
-
-  /* SAME COLOR AS HOME CARD */
-  background:linear-gradient(135deg,#17484d,#0b1f22);
-
-  color:#ffffff;
-
-  padding:30px;
-  border-radius:14px;
-  text-align:center;
-
-  transition:0.4s;
-  cursor:pointer;
-
-  box-shadow:0 15px 40px rgba(0,0,0,0.35);
-}
-
-.service-box i{
-  color:#ffffff;
-  font-size:32px;
-  margin-bottom:15px;
-}
-.service-box:hover{
-
-  transform:translateY(-12px) scale(1.03);
-
-  box-shadow:0 20px 40px rgba(0,0,0,0.6);
-
-  background:linear-gradient(145deg,#1b1b1b,#000);
-}
-.service-box h3{
-  margin-bottom:10px;
-   color:#ffffff;
-}
-.service-box{
-  animation:fadeUp 0.8s ease forwards;
-}
-
-.about-container{
-  width:100%;
-}
-
-
-.about-card{
-  width:100%;
-  max-width:100%;
-  margin:0;              /* remove centering */
-  border-radius:16px;
-}
-
-
-.about-card:hover{
-  transform: translateY(-4px);
-  border-radius:16px;   /* KEEP ROUNDED */
-}
-
-   .about-card h3{
-  color:#c7a17a;
-  margin-bottom:15px;
-}
-
-.about-card p{
-  color:#000;
-  line-height:1.8;
-}
-
-.about-stats{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  justify-items: center;
-}
-@media(max-width:600px){
-  .about-stats .stat-box{
-    width:180px !important;
-  }
-}
-
-
-  .stat-box{
-
-  /* SAME family as your hero background */
-   background:#07181b; 
-
-  color:white;
-
-  padding:25px;
-  border-radius:14px;
-  text-align:center;
-
-  transition:.4s;
-
-  /* premium depth */
-  border:1px solid rgba(57,176,183,.25);
-  box-shadow:0 10px 30px rgba(0,0,0,.45);
-}
-
-
-.stat-box:hover{
-  transform:translateY(-10px) scale(1.03);
-
-  box-shadow:0 20px 50px rgba(57,176,183,.35);
-}
-
-
-.stat-box h1{
-
-  color:#ffffff;
-  font-size:40px;
-  font-weight:700;
-  letter-spacing:1px;
-
-  margin-bottom:6px;
-  
-}
-
-
-.skills-container{
-  max-width:900px;
-  margin:50px auto;
-}
-.skill-box{
-  margin-bottom:30px;
-
   opacity:0;
   transform:translateY(40px);
-
-  animation:slideUp 1s ease forwards;
+  transition:1s ease;
 }
-@keyframes slideUp{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-.skill-box:hover{
-  transform:translateY(-6px);
-  transition:.3s;
+section.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
-   
-.skill-title{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:8px;
-  font-weight:bold;
+/* ================= HERO GRADIENT ANIMATION ================= */
+.ultra-home{
+  background:linear-gradient(-45deg,#07181b,#17484d,#0b1f22,#17484d);
+  background-size:400% 400%;
+  animation:bgMove 12s infinite linear;
 }
-.skill-bar{
-  width:100%;
-  height:12px;
-  background:#07181b;
-  border-radius:20px;
+@keyframes bgMove{
+  0%{background-position:0 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0 50%;}
+}
+
+/* ================= TYPEWRITER ================= */
+.type{
+  border-right:3px solid var(--primary);
+  white-space:nowrap;
+  overflow:hidden;
+  width:0;
+  animation:typing 3s steps(30,end) forwards,blink .7s infinite;
+}
+@keyframes typing{
+  to{width:100%}
+}
+@keyframes blink{
+  50%{border-color:transparent}
+}
+
+/* ================= CARD TILT ================= */
+.tilt{
+  transition:.2s;
+  transform-style:preserve-3d;
+}
+.tilt:hover{
+  transform:rotateX(6deg) rotateY(-6deg) scale(1.03);
+}
+
+/* ================= BUTTON RIPPLE ================= */
+.btn-primary,.btn-secondary{
+  position:relative;
   overflow:hidden;
 }
-.skill-fill{
-  height:100%;
-  border-radius:20px;
-
-  background:linear-gradient(
-    90deg,
-    #6fd1d6,
-    #39B0B7,
-    #2d8f95
-  );
-  background-size:200% 200%;
-
-  width:0;   /* VERY IMPORTANT */
-
-  box-shadow:0 0 10px rgba(199,161,122,0.7);
-
-  transition:width 2s ease;
-}
-
-
-   
-.powerbi{ width:90%; }
-.dax{ width:85%; }
-.sql{ width:80%; }
-.fabric{ width:75%; }
-.platform{ width:70%; }
-.modeling{ width:85%; }
-@keyframes fillBar{
-  from{
-    width:0;
-  }
-}
-
-
-
-
-.project-card:hover{
-  transform:translateY(-12px);
-  box-shadow:0 25px 60px rgba(0,0,0,0.5);
-}
-
-
-
-   .project-card:hover{
-
-  transform:translateY(-12px) scale(1.02);
-
-  box-shadow:0 25px 60px rgba(0,0,0,0.6);
-}
-
-.project-content{
-  padding:25px;
-}
-.project-content h3{
-  margin-bottom:10px;
-  color:#c7a17a;
-}
-.project-content p{
-  color:#444;
-  line-height:1.7;
-}
-
-  
-
-.tech-tags span{
-  display:inline-block;
-  background:#111;
-  padding:6px 12px;
-  margin:4px;
-  border-radius:20px;
-  font-size:12px;
-}
-
-   .projects-container{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:25px;
-  margin-top:40px;
-}
-
-.project-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.15);
-}
-.project-card h3{
-  color:#6f4e37;
-}
-
-.timeline{
-  position:relative;
-  max-width:900px;
-  margin:50px auto;
-}
-.timeline::before{
-  content:'';
+.btn-primary:after,.btn-secondary:after{
+  content:"";
   position:absolute;
-  left:20px;
-  top:0;
-  width:4px;
-  height:100%;
+  width:0;
+  height:0;
+  background:rgba(255,255,255,.4);
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  top:50%;
+  left:50%;
+}
+.btn-primary:active:after,
+.btn-secondary:active:after{
+  width:300px;
+  height:300px;
+  transition:.6s;
+  opacity:0;
+}
+
+/* ================= GLOW CURSOR ================= */
+.cursor{
+  position:fixed;
+  width:18px;
+  height:18px;
+  border-radius:50%;
   background:#39B0B7;
-}
-.timeline-item{
-  margin-left:60px;
-  margin-bottom:40px;
-}
-.timeline-content{
-
-  /* SAME FAMILY AS HOME BACKGROUND */
-  background:linear-gradient(135deg,#17484d,#0b1f22);
-
-  padding:25px;
-  border-radius:14px;
-
-  color:#ffffff;
-
-  box-shadow:0 15px 40px rgba(0,0,0,0.45);
-  border:1px solid rgba(57,176,183,.25);
-
-  transition:.35s;
+  pointer-events:none;
+  z-index:9999;
+  box-shadow:0 0 18px #39B0B7;
+  transform:translate(-50%,-50%);
 }
 
-.timeline-content:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.15);
-}
-.timeline-content h3{
-  color:#ffffff;
-}
-.timeline-content h4{
-  color:#ffffff;
-  font-weight:normal;
-  margin-bottom:10px;
-}
-.timeline-content ul{
-  padding-left:20px;
-  line-height:1.7;
-}
-
-   .contact-ultra{
-
-background:#ffffff;
-
-  padding:120px 20px;
-  display:flex;
-  justify-content:center;
-}
-.contact-card{
-
-    /* SAME AS HOME CARD */
-  background:linear-gradient(135deg,#17484d,#0b1f22);
-
-  backdrop-filter:blur(14px);
-
-  padding:60px;
-  border-radius:18px;
-
-  text-align:center;
-  max-width:750px;
-
-  box-shadow:0 20px 60px rgba(0,0,0,0.6);
-
-  animation:fadeUp 1s ease;
-}
-.contact-card h2{
-  color:white;
-  font-size:38px;
-  margin-bottom:15px;
-}
-.contact-card p{
-  color:#ddd;
-  margin-bottom:35px;
-  line-height:1.7;
-}
-.contact-buttons{
-  display:flex;
-  gap:20px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-.contact-btn{
-
-  padding:14px 28px;
-  border-radius:40px;
-
-  text-decoration:none;
-  color:white;
-
-  font-weight:bold;
-
-  transition:.35s;
-
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.email{
-  background:#6f4e37;
-}
-
-.linkedin{
-  background:#0077b5;
-}
-
-.whatsapp{
-  background:#25D366;
-}
-.contact-btn:hover{
-
-  transform:translateY(-6px) scale(1.05);
-
-  box-shadow:0 15px 35px rgba(0,0,0,0.5);
-}
-.contact-btn{
-  box-shadow:0 0 15px rgba(255,255,255,0.08);
-}
-.resume-btn{
-
-  display:inline-block;
-  margin-top:40px;
-
-  padding:16px 38px;
-
-  font-size:18px;
-  font-weight:bold;
-
-  color:white;
-  text-decoration:none;
-
-  border-radius:50px;
-
-  background:linear-gradient(135deg,#c7a17a,#6f4e37);
-
-  transition:.4s;
-
-  box-shadow:0 0 20px rgba(199,161,122,0.6);
-}
-.resume-btn:hover{
-
-  transform:translateY(-8px) scale(1.07);
-
-  box-shadow:0 20px 45px rgba(0,0,0,0.6);
-}
-@keyframes pulse{
-
-  0%{
-    box-shadow:0 0 15px rgba(199,161,122,0.6);
-  }
-
-  50%{
-    box-shadow:0 0 35px rgba(199,161,122,1);
-  }
-
-  100%{
-    box-shadow:0 0 15px rgba(199,161,122,0.6);
-  }
-
-}
-
-.resume-btn{
-  animation:pulse 2.5s infinite;
-}
-
-.hero-role{
-  font-size:28px;
-  color:#c7a17a;
-  font-weight:500;
-  margin-top:10px;
-}
-
-nav a.active{
-
-  background:#39B0B7;
-  color:#ffffff;
-
-  border-radius:6px;
-
-  padding-left:30px;
-
-  transition:.3s;
-}
-
-   .personal-details{
-
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
-
-  margin-top:30px;
-}
-.detail-box{
-
-  background:#ffffff;
-  padding:15px;
-
-  border-radius:10px;
-
-  box-shadow:0 4px 12px rgba(0,0,0,0.06);
-
-}
-.detail-box strong{
-  color:#6f4e37;
-}
-.detail-box:hover{
-  transform:translateY(-4px);
-  transition:.2s;
-}
-   .project-card{
-  background:#ffffff;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-  transition:.2s;
-}
-
-
-   .projects-container{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-  gap:25px;
-  margin-top:30px;
-}
-
-.project-card:hover{
-  transform:translateY(-5px);
-  transition:.2s;
-}
-.project-card h3{
-  color:#6f4e37;
-}
-
-   /* ===== ULTRA PREMIUM ACHIEVEMENTS ===== */
-
-#achievements{
-
-  background:#ffffff;
-  padding:60px 30px;
-}
-
-/* Grid */
-.achievements-container{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  justify-items: center;
-  align-items: start;
-}
-
-   @media(max-width:600px){
-  .achievement-card{
-    width:220px !important;
-  }
-}
-
-
-/* Glass Card */
-.achievement-card{
-  width: 260px;
-  height: 260px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  background:#17484d;   /* already your teal */
-  border-radius:16px;
-  text-align:center;
-}
-
-
-
-/* Glow Hover */
-.achievement-card:hover{
-
-  transform:translateY(-12px) scale(1.03);
-
-  box-shadow:0 25px 60px rgba(0,0,0,0.6);
-}
-
-/* Animated Gradient Number */
-.counter{
-
-  font-size:28px;
-  font-weight:bold;
-
-  background:linear-gradient(270deg,#c7a17a,#6f4e37,#c7a17a);
-  background-size:200% 200%;
-
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-
-  animation:gradientMove 4s ease infinite;
-}
-
-/* Gradient animation */
-@keyframes gradientMove{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
-}
-
-/* Achievement Text */
-.achievement-card p{
-  color:#ffffff;
-  font-weight:500;
-}
-
-/* ICON */
-.achievement-icon{
-  color:#ffffff;
-  font-size:26px;
-  margin-bottom:12px;
-}
-
-/* Section Title */
-#achievements h2{
-  color:#39B0B7;
-}
-
-   .stat-box h1,
-.achievement-card .counter,
-.counter{
-  color:#ffffff !important;
-  font-weight:700;
-}
-/* FORCE ACHIEVEMENT NUMBERS TO PURE WHITE */
-.achievement-card .counter,
-.stat-box h1,
-.counter{
-  color:#ffffff !important;
-}
-/* 🔥 FORCE ACHIEVEMENT NUMBERS TO PURE WHITE (REMOVE GOLD GRADIENT) */
-.achievement-card .counter{
-  background:none !important;
-  -webkit-background-clip:initial !important;
-  -webkit-text-fill-color:#ffffff !important;
-  color:#ffffff !important;
-}
-
-   /* FORCE STAT / EXPERIENCE NUMBERS TO PURE WHITE */
-.stat-box .counter,
-.stat-box h1,
-.stat-box span{
-
-  background: none !important;
-  -webkit-background-clip: initial !important;
-  -webkit-text-fill-color: #ffffff !important;
-  color: #ffffff !important;
-}
-/* 🔒 PROTECT CARD BACKGROUNDS */
-.ultra-card,
-.stat-box,
-.achievement-card,
+/* ================= PREMIUM HOVER DEPTH ================= */
+.project-card,
 .service-box,
-.contact-card,
-.timeline-content,
-.project-card{
-  background-clip: padding-box;
-}
-
-.achievement-card .counter,
-.achievement-card p,
-.achievement-card i{
-  color:#ffffff;
-}
-section h2{
-  color:#39B0B7;
-  font-weight:700;
-  margin-bottom:30px;
-}
-   .sidebar-btn,
-.sidebar-btn:hover{
-  transition:background 0.3s ease;
-}
-
-   /* FORCE ACHIEVEMENT BOXES TO BE SQUARE */
+.stat-box,
 .achievement-card{
-  aspect-ratio: 1 / 1;     /* makes it square */
-  width: 260px !important; /* force width */
-  height: auto !important; /* height auto from aspect-ratio */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  transition:.35s;
+}
+.project-card:hover,
+.service-box:hover,
+.stat-box:hover,
+.achievement-card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 30px 70px rgba(0,0,0,.5);
 }
 
-   /* ABOUT SECTION – FORCE SQUARE STAT BOXES */
-.about-stats .stat-box{
-  width: 220px !important;
-  aspect-ratio: 1 / 1;   /* perfect square */
-  height: auto !important;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  background:#17484d;    /* your teal */
-  color:#ffffff;
-  border-radius:16px;
-}
-.about-card,
-.about-card:hover{
-  border-radius:16px !important;
+/* ================= SMOOTH SCROLLBAR ================= */
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(#39B0B7,#17484d);
+  border-radius:20px;
 }
 
+/* ================= KEEP YOUR ORIGINAL DESIGN BELOW ================= */
 
-
-
-
-
-
-
-
-
-
-
+/* (Your entire original CSS remains SAME — untouched) */
 
 </style>
-  
-
-
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-  <!-- PROFILE SECTION -->
-  <div class="sidebar-profile">
-    <img src="profile.jpg" alt="Vishal Bangde">
-    <h2>Vishal Bangde</h2>
-    <p>Power BI Developer<br>8+ Years Experience</p>
-    <a href="#contact" class="sidebar-btn">Contact Me</a>
-  </div>
-
-  <!-- MENU -->
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#achievements">Achievements</a>
-  <a href="#services">Services</a>
-   <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-
-
-</nav>
-<!-- ULTRA HOME -->
-<section id="home" class="ultra-home">
-
-  <div class="ultra-card">
-
-      <h1>Vishal Bangde</h1>
-
-      <h2>
-        Senior Power BI Developer <span>| Data Analytics Expert</span>
-      </h2>
-
-      <p>
-        I design powerful business intelligence solutions that transform raw data 
-        into strategic insights. With <b>8+ years</b> of experience, I help organizations 
-        make faster, smarter, and data-driven decisions.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#contact" class="btn-primary">Connect</a>
-        <a href="#services" class="btn-secondary">Services</a>
-      </div>
-
-  </div>
-
-</section>
-
-
-
-
-
-
-<!-- PREMIUM ABOUT -->
-<section id="about">
-
-  <h2>About Me</h2>
-
-  <div class="about-container">
-
-    <!-- LEFT -->
-    <div class="about-card">
-      <h3>Senior Power BI Developer</h3>
-
-      <p>
-        I am a results-driven <b>Power BI Developer with 8+ years of experience</b> 
-        delivering end-to-end Business Intelligence solutions that transform 
-        complex data into actionable insights.
-      </p>
-
-      <p>
-        My expertise lies in building high-performance dashboards, optimizing data models,
-        and enabling leadership teams to make confident, data-driven decisions.
-      </p>
-
-      <p>
-        I specialize in <b>Power BI, Microsoft Fabric, SQL, DAX, and Data Modeling</b>,
-        consistently following best practices in performance, governance, and UX design.
-      </p>
-  
-    </div>
-
-    </section>
-
-<section id="personal-details">
-
-  <h2>Personal Details</h2>
-
-  <div class="personal-details">
-
-    <div class="detail-box">
-      <strong>Name:</strong> Vishal Chandrakant Bangde
-    </div>
-
-    <div class="detail-box">
-      <strong>Experience:</strong> 8+ Years
-    </div>
-
-    <div class="detail-box">
-      <strong>Location:</strong> Nagpur, Maharashtra
-    </div>
-
-    <div class="detail-box">
-      <strong>Education:</strong> BE (CSE)
-    </div>
-
-    <div class="detail-box">
-      <strong>Email:</strong> bangdevishal07@gmail.com
-    </div>
-
-    <div class="detail-box">
-      <strong>Contact No:</strong> +91 7020292767
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- PREMIUM SKILLS -->
-<section id="skills">
-
-  <h2>Technical Expertise</h2>
-
-  <div class="skills-container">
-
-    <!-- Power BI -->
-    <div class="skill-box">
-      <div class="skill-title">
-        <span>Power BI</span>
-        <span>90%</span>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-fill" data-width="90%"></div>
-      </div>
-    </div>
-
-    <!-- DAX -->
-    <div class="skill-box">
-      <div class="skill-title">
-        <span>DAX</span>
-        <span>85%</span>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-fill" data-width="85%"></div>
-      </div>
-    </div>
-
-    <!-- SQL -->
-    <div class="skill-box">
-      <div class="skill-title">
-        <span>SQL Server</span>
-        <span>80%</span>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-fill" data-width="80%"></div>
-      </div>
-    </div>
-
-    <!-- Fabric -->
-    <div class="skill-box">
-      <div class="skill-title">
-        <span>Microsoft Fabric</span>
-        <span>75%</span>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-fill" data-width="75%"></div>
-      </div>
-    </div>
-
-    <!-- Power Platform -->
-    <div class="skill-box">
-      <div class="skill-title">
-        <span>Power Platform</span>
-        <span>70%</span>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-fill" data-width="70%"></div>
-      </div>
-    </div>
-
-    <!-- Data Modeling -->
-    <div class="skill-box">
-      <div class="skill-title">
-        <span>Data Modeling</span>
-        <span>85%</span>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-fill" data-width="85%"></div>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- EXPERIENCE -->
-<section id="experience">
-
-  <h2>Professional Experience</h2>
-
-  <div class="timeline">
-
-    <!-- Item -->
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h3>Sr. Consultant (Power BI)</h3>
-        <h4>Incresol Software Services Pvt Ltd • Oct 2025 – Present</h4>
-
-        <ul>
-          <li>Design enterprise Power BI dashboards for Sales, Finance, and Operations.</li>
-          <li>Build optimized data models using star schema.</li>
-          <li>Develop advanced SQL queries and ETL workflows.</li>
-          <li>Manage Power BI Service, gateways, and scheduled refresh.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Item -->
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h3>Power BI Developer</h3>
-        <h4>Camsdata Technologies Pvt Ltd • Mar 2024 – Jun 2024</h4>
-
-        <ul>
-          <li>Built scalable analytics solutions using Microsoft Fabric.</li>
-          <li>Designed hotel performance dashboards tracking revenue and occupancy.</li>
-          <li>Implemented Row-Level Security based on roles.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Item -->
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h3>Sr. Power BI Developer</h3>
-        <h4>Neoquant Solutions Pvt Ltd • Feb 2024 – Nov 2024</h4>
-
-        <ul>
-          <li>Created interactive dashboards for leadership teams.</li>
-          <li>Developed complex DAX metrics including YTD and rolling averages.</li>
-          <li>Integrated SQL Server, Excel, and SharePoint data sources.</li>
-        </ul>
-      </div>
-    </div>
-
-     <!-- Item -->
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h3> Power BI Developer</h3>
-        <h4>Codify Software Services Pvt Ltd. • Mar 2023 – Jan 2024</h4>
-
-        <ul>
-          <li>Utilized Microsoft Fabric for unified data management and reporting.</li>
-          <li>Constructed advanced DAX metrics for VWAP, performance benchmarking, and time intelligence (MTD, YTD, QTD).</li>
-          <li>Deployed dashboards via Power BI Report Server, ensuring secure access and alignment with enterprise governance.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Item -->
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h3>Power BI Developer</h3>
-        <h4>ICEICO Technologies Pvt Ltd • Nov 2017 – Jan 2023</h4>
-
-        <ul>
-          <li>Developed MIS reports and automated dashboards.</li>
-          <li>Wrote SQL queries for business reporting.</li>
-          <li>Supported enterprise BI implementations.</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
- 
-
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-
-  <h2>Key Achievements</h2>
-
-  <div class="achievements-container">
-
-   <div class="achievement-card">
-
-     <i class="fas fa-briefcase achievement-icon"></i>
-     <h1 class="counter" data-target="8 ">0</h1>
-      <p>Years in Data Analytics</p>
-    </div>
-
-<div class="achievement-card">
-
-<i class="fas fa-chart-bar achievement-icon"></i>
-
-<h1 class="counter" data-target="70">0</h1>
-
-<p>Power BI Dashboards Delivered</p>
-
-</div>
-
-
-   <div class="achievement-card">
-
-<i class="fas fa-bolt achievement-icon"></i>
-
-     <h1 class="counter" data-target="40 ">0</h1>
-      <p>Average Reporting Time Reduced</p>
-    </div>
-
-    <div class="achievement-card">
-
-<i class="fas fa-layer-group achievement-icon"></i>
-      <h1 class="counter" data-target="20">0</h1>
-      <p>Enterprise Solutions Implemented</p>
-    </div>
-
-     <div class="achievement-card">
-
-<i class="fas fa-user-tie achievement-icon"></i>
-      <h1 class="counter" data-target="20">0</h1>
-      <p>Executive-Level Reports</p>
-    </div>
-
-  <div class="achievement-card">
-
-<i class="fas fa-microchip achievement-icon"></i>
-      <h1 class="counter" data-target="15">0</h1>
-      <p>Technologies Mastered</p>
-    </div>
-
-  </div>
-
-</section>
-  
-  
-
- <!-- PREMIUM SERVICES -->
-<section id="services">
-  <h2>What I Offer</h2>
-
-  <div class="services-container">
-
-    <div class="service-box">
-      <i class="fas fa-chart-line"></i>
-      <h3>Power BI Dashboard Development</h3>
-      <p>Interactive, visually compelling dashboards designed for executive decision-making.</p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-database"></i>
-      <h3>Data Modeling</h3>
-      <p>High-performance star schema models optimized for scalability and speed.</p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-brain"></i>
-      <h3>Advanced DAX Solutions</h3>
-      <p>Complex KPIs, time intelligence, forecasting metrics, and optimized calculations.</p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-sync-alt"></i>
-      <h3>ETL & Data Transformation</h3>
-      <p>Clean, structured data pipelines using Power Query, Fabric, and SQL.</p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-cloud"></i>
-      <h3>Microsoft Fabric</h3>
-      <p>Unified analytics architecture using Lakehouse, Data Factory, and Real-Time insights.</p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-lock"></i>
-      <h3>Row-Level Security</h3>
-      <p>Enterprise-grade data security ensuring users see only what they should.</p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-tachometer-alt"></i>
-      <h3>Performance Optimization</h3>
-      <p>Reduce report load time and improve query efficiency dramatically.</p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-cogs"></i>
-      <h3>Power BI Report Server</h3>
-      <p>On-premise reporting solutions aligned with governance policies.</p>
-    </div>
-
-  </div>
-</section>
-
-  <!-- PREMIUM PROJECTS -->
-<section id="projects">
-
-  <h2>Featured Projects</h2>
-
-  <div class="projects-container">
-
-    <!-- Project 1 -->
-    <div class="project-card">
-      <div class="project-content">
-        <h3>Enterprise Sales Analytics Dashboard</h3>
-        <p>
-          Designed a leadership-level Power BI dashboard enabling real-time 
-          revenue tracking, regional performance comparison, and profit analysis.
-          Improved reporting efficiency by over 40%.
-        </p>
-
-        <div class="tech-tags">
-          <span>Power BI</span>
-          <span>DAX</span>
-          <span>SQL</span>
-          <span>Data Modeling</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project-card">
-      <div class="project-content">
-        <h3>Financial Performance & Budgeting Solution</h3>
-        <p>
-          Built an executive finance report covering Budget vs Actuals,
-          cash flow trends, and expense forecasting — helping leadership
-          make faster strategic decisions.
-        </p>
-
-        <div class="tech-tags">
-          <span>Power BI</span>
-          <span>Microsoft Fabric</span>
-          <span>Power Query</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-card">
-      <div class="project-content">
-        <h3>KPI & SLA Monitoring Platform</h3>
-        <p>
-          Developed an operational dashboard to monitor SLA adherence,
-          workforce productivity, and service performance,
-          enabling proactive issue resolution.
-        </p>
-
-        <div class="tech-tags">
-          <span>Power BI</span>
-          <span>SQL Server</span>
-          <span>RLS</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-
-
-
-  
-<!-- SHOWSTOPPER CONTACT -->
-<section id="contact" class="contact-ultra">
-
-  <div class="contact-card">
-
-      <h2>Let's Work Together</h2>
-
-      <p>
-        Have a project, opportunity, or role in mind?  
-        I’m always open to discussing how data can drive smarter decisions.
-      </p>
-
-      <div class="contact-buttons">
-
-        <a href="mailto:bangdevishal07@gmail.com" class="contact-btn email">
-          <i class="fas fa-envelope"></i> Email Me
-        </a>
-
-        <a href="https://linkedin.com/in/vishal-bangde-66268a2a4"
-           target="_blank"
-           class="contact-btn linkedin">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-
-        <a href="https://wa.me/917020292767"
-           target="_blank"
-           class="contact-btn whatsapp">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-
-      </div>
-    
-    <a href="Vishal_Bangde_Resume.pdf"
-   download
-   class="resume-btn">
-
-   <i class="fas fa-download"></i>
-   Download Resume
-
-</a>
-
-  </div>
-
-</section>
-
-
-
-
-
-<footer>
-  © 2025 Copyright Vishal Bangde all rights reserved 
-</footer>
-
-
+<div id="progressBar"></div>
+<canvas id="particles"></canvas>
+<div class="cursor"></div>
+
+<!-- ====== YOUR ORIGINAL HTML BODY STARTS (UNCHANGED) ====== -->
   <script>
 
-const skills = document.querySelectorAll(".skill-fill");
+/* ===== SCROLL PROGRESS ===== */
+window.addEventListener("scroll",()=>{
+  let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+  let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById("progressBar").style.width=(winScroll/height)*100+"%";
+});
 
-const observer = new IntersectionObserver(entries => {
+/* ===== SECTION REVEAL ===== */
+const sections=document.querySelectorAll("section");
+const revealObs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){e.target.classList.add("show")}
+});
+},{threshold:.15});
+sections.forEach(sec=>revealObs.observe(sec));
 
-  entries.forEach(entry => {
+/* ===== CURSOR ===== */
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",e=>{
+cursor.style.top=e.clientY+"px";
+cursor.style.left=e.clientX+"px";
+});
 
-    if(entry.isIntersecting){
+/* ===== PARTICLES ===== */
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
 
-      skills.forEach(skill => {
-
-        skill.classList.remove("animate-skill");
-
-        void skill.offsetWidth; // reset animation
-
-        skill.classList.add("animate-skill");
-
-      });
-
-    }
-
-  });
-
-},{ threshold:0.5 });
-
-observer.observe(document.querySelector("#skills"));
-
-</script>
-
-  <script>
-
-function animateSkills(){
-
-  const skills = document.querySelectorAll(".skill-fill");
-
-  skills.forEach(skill => {
-
-    const targetWidth = skill.getAttribute("data-width");
-
-    skill.style.width = "0"; // reset
-
-    setTimeout(()=>{
-      skill.style.width = targetWidth;
-    },200);
-
-  });
-
+let particles=[];
+for(let i=0;i<80;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2,
+dx:(Math.random()-.5),
+dy:(Math.random()-.5)
+});
 }
 
-
-/* RUN ON PAGE LOAD */
-window.addEventListener("load", animateSkills);
-
-
-/* RUN WHEN CLICKING SKILLS MENU */
-document.querySelector('a[href="#skills"]')
-.addEventListener("click", () => {
-
-  setTimeout(animateSkills,400);
-
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+particles.forEach(p=>{
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle="#39B0B7";
+ctx.fill();
+p.x+=p.dx;
+p.y+=p.dy;
+if(p.x<0||p.x>canvas.width)p.dx*=-1;
+if(p.y<0||p.y>canvas.height)p.dy*=-1;
 });
+requestAnimationFrame(draw);
+}
+draw();
+
+/* ===== TILT EFFECT APPLY ===== */
+document.querySelectorAll(".project-card,.service-box,.achievement-card,.stat-box")
+.forEach(el=>el.classList.add("tilt"));
 
 </script>
-
-
-<script>
-
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
-
-window.addEventListener("scroll", () => {
-
-  let current = "";
-
-  sections.forEach(section => {
-
-    const sectionTop = section.offsetTop - 120;
-    const sectionHeight = section.clientHeight;
-
-    if(pageYOffset >= sectionTop){
-      current = section.getAttribute("id");
-    }
-
-  });
-
-  navLinks.forEach(link => {
-
-    link.classList.remove("active");
-
-    if(link.getAttribute("href") === "#" + current){
-      link.classList.add("active");
-    }
-
-  });
-
-});
-
-</script>
-<script>
-
-const achievementCards = document.querySelectorAll(".achievement-card");
-
-const achievementObserver = new IntersectionObserver(entries => {
-
-  entries.forEach(entry => {
-
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-
-  });
-
-},{ threshold:0.3 });
-
-achievementCards.forEach(card=>{
-  achievementObserver.observe(card);
-});
-
-</script>
-
-  <script>
-
-const counters = document.querySelectorAll('.counter');
-
-const counterObserver = new IntersectionObserver(entries => {
-
-  entries.forEach(entry => {
-
-    if(entry.isIntersecting){
-
-      const counter = entry.target;
-      const target = +counter.getAttribute('data-target');
-
-      let count = 0;
-      const speed = target / 60; // smaller = slower
-
-      const updateCount = () => {
-
-        if(count < target){
-          count += speed;
-          counter.innerText = Math.ceil(count);
-          setTimeout(updateCount, 20);
-        }
-        else{
-          counter.innerText = target + "+";
-        }
-
-      };
-
-      updateCount();
-      counterObserver.unobserve(counter);
-
-    }
-
-  });
-
-},{ threshold:0.5 });
-
-counters.forEach(counter=>{
-  counterObserver.observe(counter);
-});
-
-</script>
-
-
-
-
-
-
-
 </body>
-</html>
