@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vishal Bangde | Portfolio</title>
+  <title>Vishal Bangde | Instagram Premium 3.0</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-/* ================= GLOBAL ================= */
+/* ================= ROOT THEME ================= */
 :root{
   --bg:#fafafa;
-  --card:#ffffff;
-  --text:#262626;
-  --sub:#666;
-  --border:#dbdbdb;
+  --card:rgba(255,255,255,0.75);
+  --text:#111;
+  --sub:#555;
   --blue:#0095f6;
 }
 
 body.dark{
-  --bg:#121212;
-  --card:#1e1e1e;
-  --text:#ffffff;
-  --sub:#bbbbbb;
-  --border:#2a2a2a;
+  --bg:#0f0f0f;
+  --card:rgba(30,30,30,0.8);
+  --text:#fff;
+  --sub:#aaa;
 }
 
 body{
   margin:0;
   font-family:Arial, sans-serif;
-  background:var(--bg);
+  background:linear-gradient(270deg,#fdfbfb,#ebedee,#fdfbfb);
+  background-size:600% 600%;
+  animation:bgMove 20s ease infinite;
   color:var(--text);
   transition:.3s;
+}
+
+body.dark{
+  background:linear-gradient(270deg,#000000,#1a1a1a,#000000);
+}
+
+@keyframes bgMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 
 /* ================= NAV ================= */
 .navbar{
   position:sticky;
   top:0;
+  backdrop-filter:blur(10px);
   background:var(--card);
-  border-bottom:1px solid var(--border);
-  padding:15px 25px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
+  padding:15px 25px;
   z-index:100;
-}
-
-.navbar h2{
-  margin:0;
-  font-weight:600;
 }
 
 .toggle{
@@ -58,186 +62,175 @@ body{
 
 /* ================= CONTAINER ================= */
 .container{
-  max-width:950px;
-  margin:40px auto;
+  max-width:1000px;
+  margin:50px auto;
   padding:0 20px;
 }
 
 /* ================= PROFILE ================= */
 .profile{
   display:flex;
-  gap:50px;
+  gap:60px;
   flex-wrap:wrap;
+  align-items:center;
 }
 
 .profile img{
-  width:170px;
-  height:170px;
+  width:180px;
+  height:180px;
   border-radius:50%;
   object-fit:cover;
-  border:4px solid var(--border);
+  border:5px solid transparent;
+  background:linear-gradient(45deg,#feda75,#d62976,#4f5bd5);
+  padding:4px;
 }
 
 .profile-info h1{
   margin:0;
-  font-size:28px;
+  font-size:30px;
 }
 
 .verified{
   color:var(--blue);
-  font-size:18px;
-  margin-left:5px;
+  margin-left:6px;
 }
 
-.profile-info h3{
-  margin:6px 0 15px;
-  font-weight:400;
-  color:var(--sub);
-}
-
-/* ================= STATS ================= */
 .stats{
   display:flex;
   gap:40px;
-  margin-bottom:15px;
+  margin:15px 0;
 }
 
-.stats div{
-  text-align:center;
-}
-
-.stats strong{
+.stats div strong{
   font-size:20px;
   display:block;
 }
 
 .bio{
   max-width:500px;
-  line-height:1.6;
   color:var(--sub);
+  line-height:1.6;
 }
 
 /* ================= BUTTONS ================= */
-.buttons{
-  margin-top:15px;
-}
-
 .btn{
-  padding:8px 18px;
+  padding:9px 20px;
   border-radius:8px;
-  border:1px solid var(--border);
-  background:var(--card);
-  color:var(--text);
+  border:none;
+  cursor:pointer;
+  margin-right:10px;
   font-weight:600;
-  text-decoration:none;
-  margin-right:8px;
   transition:.3s;
 }
 
-.btn.primary{
+.primary{
   background:var(--blue);
   color:white;
-  border:none;
+}
+
+.secondary{
+  background:var(--card);
+  color:var(--text);
 }
 
 .btn:hover{
-  transform:translateY(-2px);
+  transform:translateY(-3px);
 }
 
-/* ================= STORY HIGHLIGHTS ================= */
-.highlights{
-  display:flex;
-  gap:25px;
-  margin:35px 0;
-  overflow-x:auto;
-}
-
-.story{
+/* ================= PROJECTS (REELS STYLE) ================= */
+.section-title{
   text-align:center;
+  margin:50px 0 20px;
+  font-weight:bold;
 }
 
-.story-circle{
-  width:80px;
-  height:80px;
-  border-radius:50%;
-  padding:3px;
-  background:linear-gradient(45deg,#feda75,#d62976,#4f5bd5);
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.project{
+  position:relative;
+  height:250px;
+  border-radius:15px;
+  overflow:hidden;
+  cursor:pointer;
+  background:var(--card);
+  backdrop-filter:blur(12px);
   display:flex;
   align-items:center;
   justify-content:center;
-  margin-bottom:6px;
+  text-align:center;
+  font-weight:bold;
+  transition:.4s;
 }
 
-.story-circle div{
-  width:70px;
-  height:70px;
-  background:var(--card);
+.project:hover{
+  transform:scale(1.05);
+  box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* ================= MODAL ================= */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  visibility:hidden;
+  opacity:0;
+  transition:.3s;
+}
+
+.modal-content{
+  background:white;
+  padding:40px;
+  border-radius:15px;
+  max-width:500px;
+  text-align:center;
+}
+
+body.dark .modal-content{
+  background:#1e1e1e;
+  color:white;
+}
+
+.modal.active{
+  visibility:visible;
+  opacity:1;
+}
+
+/* ================= FLOAT BUTTON ================= */
+.floating{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:var(--blue);
+  color:white;
+  width:55px;
+  height:55px;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
   font-size:22px;
-}
-
-/* ================= SECTION TITLE ================= */
-.section-title{
-  margin:30px 0 15px;
-  border-top:1px solid var(--border);
-  padding-top:15px;
-  font-weight:600;
-  text-align:center;
-}
-
-/* ================= PROJECT GRID ================= */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:18px;
-}
-
-.project{
-  position:relative;
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:25px;
-  overflow:hidden;
   cursor:pointer;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
   transition:.3s;
 }
 
-.project:hover{
-  transform:scale(1.03);
-  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+.floating:hover{
+  transform:scale(1.1);
 }
 
-.overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.7);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  opacity:0;
-  transition:.3s;
-  padding:20px;
-}
-
-.project:hover .overlay{
-  opacity:1;
-}
-
-/* ================= FOOTER ================= */
 footer{
   text-align:center;
-  padding:40px;
+  padding:50px;
   color:var(--sub);
-  font-size:14px;
 }
 
-/* ================= MOBILE ================= */
 @media(max-width:768px){
   .profile{
     flex-direction:column;
@@ -253,27 +246,20 @@ footer{
 
 <body>
 
-<!-- NAV -->
 <div class="navbar">
-  <h2>Vishal Bangde</h2>
+  <strong>Vishal Bangde</strong>
   <div class="toggle" onclick="toggleMode()">
-    <i class="fas fa-moon"></i>
+    <i class="fas fa-adjust"></i>
   </div>
 </div>
 
 <div class="container">
 
-<!-- PROFILE -->
 <div class="profile">
   <img src="profile.jpg">
 
   <div class="profile-info">
-    <h1>
-      Vishal Bangde 
-      <i class="fas fa-check-circle verified"></i>
-    </h1>
-
-    <h3>Senior Power BI Developer</h3>
+    <h1>Vishal Bangde <i class="fas fa-check-circle verified"></i></h1>
 
     <div class="stats">
       <div><strong class="counter" data-target="70">0</strong>Dashboards</div>
@@ -282,92 +268,72 @@ footer{
     </div>
 
     <div class="bio">
-      Transforming raw data into executive-level insights using Power BI, DAX, SQL, and Microsoft Fabric. Passionate about performance optimization and enterprise BI.
+      Senior Power BI Developer transforming enterprise data into executive-level insights using Power BI, DAX, SQL & Microsoft Fabric.
     </div>
 
-    <div class="buttons">
-      <a href="mailto:bangdevishal07@gmail.com" class="btn primary">Email</a>
-      <a href="https://linkedin.com" class="btn">LinkedIn</a>
-      <a href="Vishal_Bangde_Resume.pdf" download class="btn">Resume</a>
-    </div>
+    <br>
+    <button class="btn primary">Hire Me</button>
+    <button class="btn secondary">Download Resume</button>
   </div>
 </div>
 
-<!-- STORY HIGHLIGHTS -->
-<div class="highlights">
-  <div class="story">
-    <div class="story-circle"><div><i class="fas fa-chart-line"></i></div></div>
-    Sales BI
-  </div>
-  <div class="story">
-    <div class="story-circle"><div><i class="fas fa-coins"></i></div></div>
-    Finance
-  </div>
-  <div class="story">
-    <div class="story-circle"><div><i class="fas fa-database"></i></div></div>
-    SQL
-  </div>
-  <div class="story">
-    <div class="story-circle"><div><i class="fas fa-brain"></i></div></div>
-    DAX
-  </div>
-</div>
-
-<!-- PROJECTS -->
-<div class="section-title">PROJECTS</div>
+<div class="section-title">Featured Projects</div>
 
 <div class="grid">
 
-  <div class="project">
+  <div class="project" onclick="openModal('Enterprise Sales Dashboard improved reporting by 40%.')">
     Enterprise Sales Dashboard
-    <div class="overlay">
-      Real-time revenue tracking, 40% reporting improvement, regional analytics.
-    </div>
   </div>
 
-  <div class="project">
+  <div class="project" onclick="openModal('Financial analytics with Budget vs Actual & forecasting.')">
     Financial Performance Analytics
-    <div class="overlay">
-      Budget vs Actual, forecasting, executive KPIs.
-    </div>
   </div>
 
-  <div class="project">
+  <div class="project" onclick="openModal('KPI & SLA Monitoring with RLS implementation.')">
     KPI & SLA Monitoring
-    <div class="overlay">
-      Workforce productivity tracking with RLS implementation.
-    </div>
-  </div>
-
-  <div class="project">
-    Microsoft Fabric Architecture
-    <div class="overlay">
-      Lakehouse + Data Factory + Real-time insights.
-    </div>
   </div>
 
 </div>
 
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <p id="modal-text"></p>
+    <br>
+    <button class="btn primary" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<div class="floating">
+  <i class="fas fa-envelope"></i>
 </div>
 
 <footer>
-© 2026 Vishal Bangde • Instagram Premium 2.0 Portfolio
+© 2026 Vishal Bangde • Instagram Premium 3.0
 </footer>
 
 <script>
 
-/* DARK MODE */
 function toggleMode(){
   document.body.classList.toggle("dark");
 }
 
-/* COUNTER ANIMATION */
+function openModal(text){
+  document.getElementById("modal-text").innerText=text;
+  document.getElementById("modal").classList.add("active");
+}
+
+function closeModal(){
+  document.getElementById("modal").classList.remove("active");
+}
+
 const counters=document.querySelectorAll('.counter');
 counters.forEach(counter=>{
   const update=()=>{
     const target=+counter.getAttribute('data-target');
     let count=+counter.innerText;
-    const inc=target/60;
+    const inc=target/50;
     if(count<target){
       counter.innerText=Math.ceil(count+inc);
       setTimeout(update,20);
